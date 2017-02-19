@@ -44,7 +44,7 @@ public class AbstractChapterSpider implements IChapterSpider {
             for (Element e: elements) {
                 Chapter chapter = new Chapter();
                 chapter.setTitle(e.text());
-                chapter.setUrl(e.attr("href"));
+                chapter.setUrl("http://www.biquge.tw"+e.attr("href"));
                 chapters.add(chapter);
             }
             return chapters;
