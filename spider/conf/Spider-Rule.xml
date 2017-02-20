@@ -4,12 +4,20 @@
 		<title>顶点小说</title>
 		<charset>GBK</charset>
 		<url>http://www.23wx.com</url>
-		<chapter-list-selector>#at td a</chapter-list-selector>
+		<chapter-list-selector>#at tbody tr td a</chapter-list-selector>
+		<chapter-detail-title-selector></chapter-detail-title-selector>
+		<chapter-detail-content-selector></chapter-detail-content-selector>
+		<chapter-detail-prev-selector></chapter-detail-prev-selector>
+		<chapter-detail-next-selector></chapter-detail-next-selector>
 	</site>
 	<site>
 		<title>笔趣阁</title>
 		<charset>UTF-8</charset>
 		<url>http://www.biquge.tw</url>
 		<chapter-list-selector>#list dd a</chapter-list-selector>
+		<chapter-detail-title-selector>.bookname h1,0</chapter-detail-title-selector>
+		<chapter-detail-content-selector>#content</chapter-detail-content-selector>
+		<chapter-detail-prev-selector>#pager_prev</chapter-detail-prev-selector>
+		<chapter-detail-next-selector>#pager_next</chapter-detail-next-selector>
 	</site>
 </sites>

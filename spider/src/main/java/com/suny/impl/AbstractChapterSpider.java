@@ -21,22 +21,9 @@ import java.util.List;
  * 孙建荣
  * 2017/02/19 14:38
  */
-public abstract class AbstractChapterSpider implements IChapterSpider {
+public abstract class AbstractChapterSpider extends AbstractSpider implements IChapterSpider {
 
-    protected String crwal(String url) throws Exception {
-        try (CloseableHttpClient closeableHttpClient = HttpClientBuilder.create().build();
-             CloseableHttpResponse httpResponse = closeableHttpClient.execute(new HttpGet(url))
-        ) {
-            //返回抓取的结果
-            String result = EntityUtils.toString(httpResponse.getEntity(),
-                    NovelSpiderUtil.getContext(NovelSiteEnum.getEnumByUrl(url)).get("charset"));
-            //传入解析的编码d
-            return result;
-        } catch (Exception e) {
-            throw new RuntimeException();
-        }
 
-    }
 
     @Override
     public List<Chapter> getChapter(String url) {

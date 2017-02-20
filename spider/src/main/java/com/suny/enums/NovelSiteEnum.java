@@ -29,6 +29,7 @@ public enum  NovelSiteEnum {
         return url;
     }
 
+
     public void setUrl(String url) {
         this.url = url;
     }
@@ -52,19 +53,4 @@ public enum  NovelSiteEnum {
         throw new RuntimeException(" url="+  url + "is not support");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

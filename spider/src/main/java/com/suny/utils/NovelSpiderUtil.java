@@ -30,6 +30,7 @@ public final class NovelSpiderUtil {
     private static  void init() {
         SAXReader saxReader = new SAXReader();
         try {
+
             Document document = saxReader.read(new File("conf/Spider-Rule.xml"));
             Element root = document.getRootElement();    //获取根元素
             List<Element> sites = root.elements("site");   //获取site标签下的元素
