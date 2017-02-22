@@ -7,7 +7,9 @@ package com.suny.enums;
  */
 public enum  NovelSiteEnum {
     DingDianXiaoShuo(1,"23wx.com"),
-    BiQuGe(2,"biquge.tw");
+    BiQuGe(2,"biquge.tw"),
+    KanShuZhong(3, "kanshuzhong.com"),
+    Bxwx(4, "bxwx8.org");
 
     private int id;
     private String url;

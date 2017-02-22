@@ -31,7 +31,7 @@ public abstract class AbstractChapterSpider extends AbstractSpider implements IC
             String result = this.crwal(url);
             Document document = Jsoup.parse(result);   //解析页面数据
             document.setBaseUri(url);
-            Elements elements = document.select(NovelSpiderUtil.getContext(NovelSiteEnum.getEnumByUrl(url)).get("chapter-list-selecttor"));
+            Elements elements = document.select(NovelSpiderUtil.getContext(NovelSiteEnum.getEnumByUrl(url)).get("chapter-list-selector"));
             List<Chapter> chapters = new ArrayList<>();
             for (Element e : elements) {
                 Chapter chapter = new Chapter();
