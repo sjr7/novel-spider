@@ -3,9 +3,9 @@ package com.suny.interfaces;
 import com.suny.configuration.Configuration;
 
 /**
- * 下载小说的接口
- * 孙建荣
- * 2017/02/21 21:49
+ * Comments:    下载小说的接口
+ * Author:      孙建荣
+ * Create Date: 2017/02/21 21:49
  */
 public interface INovelDownload {
 

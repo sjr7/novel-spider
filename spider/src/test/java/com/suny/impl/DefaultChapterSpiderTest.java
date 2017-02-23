@@ -3,7 +3,6 @@ package com.suny.impl;
 import com.suny.configuration.Configuration;
 import com.suny.entites.Chapter;
 import com.suny.enums.NovelSiteEnum;
-import com.suny.interfaces.IChapterDetailSpider;
 import com.suny.interfaces.IChapterSpider;
 import com.suny.interfaces.INovelDownload;
 import com.suny.utils.NovelSpiderUtil;

@@ -4,13 +4,14 @@ import java.io.Serializable;
 
 
 /**
- * 孙建荣
- * 2017/02/19 10:36
+ * Comments:    一个章节对应的实体类，包含章节标题，章节所对应的url地址
+ * Author:        孙建荣
+ * Create Date: 2017/02/19 10:36
  */
 public class Chapter implements Serializable {
 
-    private String title;
-    private String url;
+    private String title;       // 章节标题
+    private String url;         //章节所对应的url地址
 
     public Chapter() {
     }

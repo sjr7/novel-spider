@@ -5,9 +5,11 @@ import com.suny.Factory.ChapterSpiderFactory;
 import com.suny.configuration.Configuration;
 import com.suny.entites.Chapter;
 import com.suny.entites.ChapterDetail;
+import com.suny.enums.NovelSiteEnum;
 import com.suny.interfaces.IChapterDetailSpider;
 import com.suny.interfaces.IChapterSpider;
 import com.suny.interfaces.INovelDownload;
+import com.suny.utils.NovelSpiderUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -33,60 +35,72 @@ public class NovelDownload implements INovelDownload {
         Map<String, List<Chapter>> downloadTaskAlloc = new HashMap<>();
 
         for (int i = 0; i < maxThreadSize; i++) {
-
             int formIndex = i * (configuration.getSize());
-            if (i == maxThreadSize - 1) {
-                int totalIndex = chapterList.size() - 1;
-
-            }
-
-            int toIndex = i == maxThreadSize - 1 ? chapterList.size() - 1 : i * (configuration.getSize()) + configuration.getSize() - 1;
+            int toIndex = i == maxThreadSize - 1 ? chapterList.size() : i * (configuration.getSize()) + configuration.getSize();
             downloadTaskAlloc.put(formIndex + "-" + toIndex, chapterList.subList(formIndex, toIndex));
         }
         ExecutorService service = Executors.newFixedThreadPool(maxThreadSize);
         Set<String> keySet = downloadTaskAlloc.keySet();
         List<Future<String>> tasks = new ArrayList<>();
+
+        //解决路径缺失的问题
+        String savePath = configuration.getPath() + "/" + NovelSiteEnum.getEnumByUrl(url).getUrl();
+        new File(savePath).mkdirs();
+
         for (String s : keySet) {
-
-            tasks.add(service.submit(new DownloadCallable(configuration.getPath() + "/" + s + ".txt", downloadTaskAlloc.get(s))));
-
+            tasks.add(service.submit(new DownloadCallable(savePath + "/" + s + ".txt", downloadTaskAlloc.get(s), configuration.getTryTimes())));
         }
         service.shutdown();
         for (Future<String> future : tasks) {
             try {
-                System.out.println(future.get() + "success download this novel ");
+                System.out.println(future.get() + " >>>>   success download this novel ");
             } catch (InterruptedException | ExecutionException e) {
                 e.printStackTrace();
             }
         }
-        return null;
+        NovelSpiderUtil.multiFileMerge(savePath, null, true);
+        return savePath + "/merge.txt";
     }
 }
 
 
-    class DownloadCallable implements Callable<String> {
-        private List<Chapter> chapters;
-        private String path;
-        public DownloadCallable(String path, List<Chapter> chapters) {
-            this.path = path;
-            this.chapters = chapters;
-        }
-        @Override
-        public String call() throws Exception {
-            try (
-                    PrintWriter out = new PrintWriter(new File(path));
-            ) {
-                for (Chapter chapter : chapters) {
-                    IChapterDetailSpider spider = ChapterDetailSpiderFactory.getChapterDetailSpider(chapter.getUrl());
-                    ChapterDetail detail = spider.getChapterDetail(chapter.getUrl());
-                    out.println(detail.getTitle());
-                    out.println(detail.getContent());
+class DownloadCallable implements Callable<String> {
+    private List<Chapter> chapters;
+    private String path;
+    private int tryTimes;
+
+    public DownloadCallable(String path, List<Chapter> chapters, int tryTimes) {
+        this.path = path;
+        this.chapters = chapters;
+        this.tryTimes = tryTimes;
+    }
+
+    @Override
+    public String call() throws Exception {
+        try (
+                PrintWriter out = new PrintWriter(new File(path));
+        ) {
+            for (Chapter chapter : chapters) {
+                IChapterDetailSpider spider = ChapterDetailSpiderFactory.getChapterDetailSpider(chapter.getUrl());
+                ChapterDetail detail = null;
+                for (int i = 0; i < tryTimes; i++) {
+                    try {
+                        detail = spider.getChapterDetail(chapter.getUrl());
+                        out.println(detail.getTitle());
+                        out.println(detail.getContent());
+                        break;
+                    } catch (RuntimeException e) {
+                        System.err.print("trying fails " + (i + 1) + " download this file");
+                    }
                 }
-            } catch (IOException e) {
-                throw new RuntimeException(e);
+
+
             }
-            return path;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+        return path;
+    }
 }
 
 

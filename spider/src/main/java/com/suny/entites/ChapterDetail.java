@@ -3,16 +3,16 @@ package com.suny.entites;
 import java.io.Serializable;
 
 /**
- * 章节详细内容
- * 孙建荣
- * 2017/02/20 19:57
+ * Comments:  每个章节的文本详细内容
+ * Author:       孙建荣
+ * Create Date:  2017/02/20 19:57
  */
-public class ChapterDetail implements Serializable{
+public class ChapterDetail implements Serializable {
 
-    private String title;    //标题
-    private String content;  //正文
-    private String prev;   //上一页
-    private String next;    //下一页
+    private String title;             //章节标题
+    private String content;           //章节正文
+    private String prev;             //上一页的url地址
+    private String next;             //下一页的url地址
 
     public ChapterDetail() {
     }
@@ -53,7 +53,7 @@ public class ChapterDetail implements Serializable{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
+        
         ChapterDetail that = (ChapterDetail) o;
 
         if (content != null ? !content.equals(that.content) : that.content != null) return false;

@@ -6,8 +6,9 @@ import com.suny.impl.DefaultChapterSpider;
 import com.suny.interfaces.IChapterSpider;
 
 /**
- * 孙建荣
- * 2017/02/21 22:05
+ * Comments:   章节爬虫工厂代理类
+ * Author:      孙建荣
+ * Create Date: 2017/02/21 22:05
  */
 public class ChapterSpiderFactory {
 

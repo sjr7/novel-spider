@@ -5,8 +5,9 @@ import com.suny.entites.Chapter;
 import java.util.List;
 
 /**
- * 孙建荣
- * 2017/02/19 14:34
+ * Comments:
+ * Author:        孙建荣
+ * Create Date:   2017/02/19 14:34
  */
 public interface IChapterSpider {
 
