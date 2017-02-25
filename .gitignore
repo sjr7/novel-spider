@@ -7,9 +7,6 @@
 *.ctxt
 
 =======
-*.class
-
->>>>>>> 07194a941583c47f066f82b67e357a7ab08fce70
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
@@ -20,13 +17,11 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-<<<<<<< HEAD
-
 .gitignore
-.idea/
+
 spider/spider.iml
 novel-spider.iml
+spider/target
+/target
 #pom.xml
 #spider/
-=======
->>>>>>> 07194a941583c47f066f82b67e357a7ab08fce70

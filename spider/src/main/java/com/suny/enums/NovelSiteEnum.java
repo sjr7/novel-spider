@@ -9,7 +9,7 @@ public enum NovelSiteEnum {
     DingDianXiaoShuo(1, "23wx.com"),           //顶点小说
     BiQuGe(2, "biquge.tw"),                      //笔趣阁
     KanShuZhong(3, "kanshuzhong.com"),          //看书中
-    Bxwx(4, "bxwx8.org");                       //笔下文学
+    Bxwx(4, "bxwx9.org");                       //笔下文学
 
     private int id;             //  枚举对象对应的id
     private String url;         // 枚举对象对应的url地址
@@ -65,7 +65,7 @@ public enum NovelSiteEnum {
                 return novelSiteEnum;
             }
         }
-        throw new RuntimeException(" url=" + url + "is not support");
+        throw new RuntimeException(" url=" + url + "  is not support");
     }
 }
 

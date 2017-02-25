@@ -1,7 +1,7 @@
 package com.suny.Factory;
 
 import com.suny.enums.NovelSiteEnum;
-import com.suny.impl.DefaultChapterDetailSpider;
+import com.suny.impl.chapter.DefaultChapterDetailSpider;
 import com.suny.interfaces.IChapterDetailSpider;
 
 /**

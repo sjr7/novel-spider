@@ -14,6 +14,9 @@ public class Configuration implements Serializable {
      */
     public static final int DEFAULT_TRY_TIMES = 3;
 
+    
+
+
     /**
      * 每个线程默认下载的最大章节数
      */
@@ -39,6 +42,7 @@ public class Configuration implements Serializable {
         // 把默认配置的参数传进去
         this.size = DEFAULT_SIZE;
         this.tryTimes = DEFAULT_TRY_TIMES;
+
     }
 
     public String getPath() {

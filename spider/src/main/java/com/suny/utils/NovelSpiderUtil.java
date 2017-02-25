@@ -7,6 +7,8 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 
 import java.io.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -123,6 +125,57 @@ public final class NovelSpiderUtil {
         }
 
     }
+
+    /**
+     *  格式化字符串常量为如期对象
+     * @param dateStr   日期字符串
+     * @param pattern   转换规则
+     * @return
+     * @throws ParseException
+     */
+    public static Date getDate(String dateStr, String pattern) throws ParseException {
+        // 有些网站挺奇葩的，更新时间是月份，不是年月日
+        if (!"MM-dd".equals(pattern)) {
+            pattern = "yyyy-MM-dd";
+            dateStr = getDateField(Calendar.YEAR) + "-" + dateStr;
+
+        }
+        // 记住要传入转换规则pattern ，被这个坑了一个小时。。。。。。。
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+        Date date = simpleDateFormat.parse(dateStr);
+        return date;
+    }
+
+    /**
+     * 获取本时刻的字符量
+     *
+     * @param field 字段值
+     * @return
+     */
+    public static String getDateField(int field) {
+        Calendar calendar = new GregorianCalendar();
+        return calendar.get(field)+"";    // 自动转化为String对象
+    }
+
+
+    /**
+     * 获取书籍的状态
+     * @param status   状态值
+     * @return
+     */
+    public static int getNovelStatus(String status){
+        if(status.contains("连载")) {
+            return 1;
+        }
+        else if( status.contains("完结")|| status.contains("完成")) {
+            return 2;
+        }
+        else {
+            throw new RuntimeException("this is not support by status" + status);
+        }
+    }
+
+
 
 
 }

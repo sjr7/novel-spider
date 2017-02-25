@@ -1,8 +1,8 @@
 package com.suny.Factory;
 
 import com.suny.enums.NovelSiteEnum;
-import com.suny.impl.BxwxChapterSpider;
-import com.suny.impl.DefaultChapterSpider;
+import com.suny.impl.chapter.BxwxChapterSpider;
+import com.suny.impl.chapter.DefaultChapterSpider;
 import com.suny.interfaces.IChapterSpider;
 
 /**

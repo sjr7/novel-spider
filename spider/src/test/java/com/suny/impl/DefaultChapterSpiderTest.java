@@ -1,10 +1,15 @@
 package com.suny.impl;
 
+import com.suny.Factory.NovelSpiderFactory;
 import com.suny.configuration.Configuration;
 import com.suny.entites.Chapter;
+import com.suny.entites.Novel;
 import com.suny.enums.NovelSiteEnum;
+import com.suny.impl.chapter.DefaultChapterSpider;
+import com.suny.impl.download.NovelDownload;
 import com.suny.interfaces.IChapterSpider;
 import com.suny.interfaces.INovelDownload;
+import com.suny.interfaces.INovelSpider;
 import com.suny.utils.NovelSpiderUtil;
 import junit.framework.TestCase;
 import org.junit.Test;
@@ -14,6 +19,12 @@ import java.util.List;
 public class DefaultChapterSpiderTest extends TestCase {
 
 
+
+
+
+
+   /*
+
     public void testDownload() {
         INovelDownload download = new NovelDownload();
         Configuration config = new Configuration();
@@ -21,6 +32,7 @@ public class DefaultChapterSpiderTest extends TestCase {
         config.setSize(100);
         download.download("http://www.biquge.tw/0_5", config);
     }
+
 
     public void testChapterDetail() {
 
@@ -33,7 +45,7 @@ public class DefaultChapterSpiderTest extends TestCase {
         System.out.println(NovelSpiderUtil.getContext(NovelSiteEnum.getEnumByUrl("http://www.biquge.tw/0_5/")));
     }
 
-    @Test
+
     public void test() {
         IChapterSpider chapterSpider = new DefaultChapterSpider();
         System.out.println("start visit website");
@@ -43,5 +55,6 @@ public class DefaultChapterSpiderTest extends TestCase {
         }
 
     }
+   */
 
 }
