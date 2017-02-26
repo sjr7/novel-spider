@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="spider" />
+        <module name="storage" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

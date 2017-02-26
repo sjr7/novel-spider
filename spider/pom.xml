@@ -11,13 +11,13 @@
 
     <artifactId>spider</artifactId>
 
-    <configuration>
+    <!--<configuration>-->
 
-        <forkMode>once</forkMode>
+        <!--<forkMode>once</forkMode>-->
 
-        <argLine>-Dfile.encoding=UTF-8</argLine>
+        <!--<argLine>-Dfile.encoding=UTF-8</argLine>-->
 
-    </configuration>
+    <!--</configuration>-->
 
 
     <dependencies>
@@ -56,8 +56,8 @@
 
 
 
-
     </dependencies>
+
 
 
 

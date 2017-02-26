@@ -2,30 +2,59 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c4004-8bfc-4854-ab14-55ad33f2c87d" name="Default" comment="完成简单的抓取，可以小说一章节的内容">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/AbstractNovelSpider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/BxwxNovelSpider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/interfaces/INovelSpider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/KanShuZhongNovelSpider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/test/java/com/suny/impl/novel/KanShuZhongNovelSpiderTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/entites/Novel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/NovelSpiderFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/novel/BxwxNovelSpiderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/interfaces/INovelSpider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/test/java/com/suny/storage/mapper/NovelMapperTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/main/resources/generatorConfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/storage.iml" />
+      <change type="DELETED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\novel\AbstractNovelSpider.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\interfaces\INovelSpider.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\novel-spider\spider\target\MANIFEST.MF" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/AbstractSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/AbstractSpider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/ChapterDetailSpiderFactory.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/ChapterDetailSpiderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/ChapterSpiderFactory.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/ChapterSpiderFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/configuration/Configuration.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/configuration/Configuration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/test/java/com/suny/impl/DefaultChapterSpiderTest.java" afterPath="$PROJECT_DIR$/spider/src/test/java/com/suny/impl/DefaultChapterSpiderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/spider/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/enums/NovelSiteEnum.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/enums/NovelSiteEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/utils/NovelSpiderUtil.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/utils/NovelSpiderUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/conf/Spider-Rule.xml" afterPath="$PROJECT_DIR$/spider/conf/Spider-Rule.xml" />
-      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\AbstractChapterDetailSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/AbstractChapterDetailSpider.java" />
-      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\AbstractChapterSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/AbstractChapterSpider.java" />
-      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\BxwxChapterSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/BxwxChapterSpider.java" />
-      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\DefaultChapterDetailSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/DefaultChapterDetailSpider.java" />
-      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\DefaultChapterSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/DefaultChapterSpider.java" />
-      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\NovelDownload.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/download/NovelDownload.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/pom.xml" afterPath="$PROJECT_DIR$/spider/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\Factory\ChapterDetailSpiderFactory.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/Factory/ChapterDetailSpiderFactory.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\Factory\ChapterSpiderFactory.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/Factory/ChapterSpiderFactory.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\Factory\NovelSpiderFactory.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/Factory/NovelSpiderFactory.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\configuration\Configuration.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/configuration/Configuration.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\entites\Chapter.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/entites/Chapter.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\entites\ChapterDetail.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/entites/ChapterDetail.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\entites\Novel.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/entites/Novel.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\enums\NovelSiteEnum.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/enums/NovelSiteEnum.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\AbstractSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\chapter\AbstractChapterDetailSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/chapter/AbstractChapterDetailSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\chapter\AbstractChapterSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/chapter/AbstractChapterSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\chapter\BxwxChapterSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/chapter/BxwxChapterSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\chapter\DefaultChapterDetailSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/chapter/DefaultChapterDetailSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\chapter\DefaultChapterSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/chapter/DefaultChapterSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\download\NovelDownload.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/download/NovelDownload.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\novel\BxwxNovelSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\impl\novel\KanShuZhongNovelSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\interfaces\IChapterDetailSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/interfaces/IChapterDetailSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\interfaces\IChapterSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/interfaces/IChapterSpider.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\interfaces\INovelDownload.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/interfaces/INovelDownload.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\utils\NovelSpiderHttpGet.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/utils/NovelSpiderHttpGet.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\main\java\com\suny\utils\NovelSpiderUtil.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/utils/NovelSpiderUtil.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\test\java\com\suny\impl\DefaultChapterSpiderTest.java" afterPath="$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/DefaultChapterSpiderTest.java" />
+      <change type="MOVED" beforePath="D:\workspace\novel-spider\spider\src\test\java\com\suny\impl\novel\KanShuZhongNovelSpiderTest.java" afterPath="$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/novel/KanShuZhongNovelSpiderTest.java" />
     </list>
     <ignored path="novel-spider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,6 +62,7 @@
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/spider/target/" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path="$PROJECT_DIR$/storage/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,12 +82,52 @@
   <component name="DaemonCodeAnalyzer">
     <disable_hints />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_TOOLBAR" value="true" />
+    <option name="FLATTEN" value="false" />
+    <option name="GROUP_BY_TYPE" value="true" />
+    <option name="SORT_CHILDREN" value="false" />
+    <option name="SHOW_TABLE_CONSTRAINTS" value="true" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="novel-spider" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="NovelMapperTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/mapper/NovelMapperTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="540">
+              <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SqlMapConfig.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="520">
+              <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.71" vertical-offset="196" max-vertical-offset="680">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,7 +137,6 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/entitys/Chapter.java" />
-        <option value="$PROJECT_DIR$/spider/pom.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/spider/src/main/resources/conf/Spider-Rule" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/DefaultChapterDetail.java" />
@@ -88,16 +157,27 @@
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/utils/NovelSpiderHttpGet.java" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/configuration/Configuration.java" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/entites/Novel.java" />
-        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/interfaces/INovelSpider.java" />
-        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/BxwxNovelSpider.java" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/NovelSpiderFactory.java" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/enums/NovelSiteEnum.java" />
         <option value="$PROJECT_DIR$/spider/src/test/java/com/suny/impl/DefaultChapterSpiderTest.java" />
-        <option value="$PROJECT_DIR$/spider/conf/Spider-Rule.xml" />
-        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/AbstractNovelSpider.java" />
-        <option value="$PROJECT_DIR$/spider/src/test/java/com/suny/impl/novel/KanShuZhongNovelSpiderTest.java" />
-        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/KanShuZhongNovelSpider.java" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/utils/NovelSpiderUtil.java" />
+        <option value="$PROJECT_DIR$/spider/conf/Spider-Rule.xml" />
+        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/interfaces/INovelSpider.java" />
+        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/AbstractNovelSpider.java" />
+        <option value="$PROJECT_DIR$/spider/conf/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/spider/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/KanShuZhongNovelSpider.java" />
+        <option value="$PROJECT_DIR$/spider/src/test/java/com/suny/impl/novel/KanShuZhongNovelSpiderTest.java" />
+        <option value="$PROJECT_DIR$/spider/src/test/java/com/suny/impl/novel/BxwxNovelSpiderTest.java" />
+        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/BxwxNovelSpider.java" />
+        <option value="$PROJECT_DIR$/spider/pom.xml" />
+        <option value="$PROJECT_DIR$/storage/pom.xml" />
+        <option value="$PROJECT_DIR$/storage/src/main/resources/generatorConfig.xml" />
+        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java" />
+        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java" />
+        <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/entites/Novel.java" />
+        <option value="$PROJECT_DIR$/storage/src/test/java/com/suny/storage/mapper/NovelMapperTest.java" />
+        <option value="$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml" />
         <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
@@ -116,6 +196,79 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="storage" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="storage" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="storage" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="resources" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="storage" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Plugins" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginsNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="mybatis-generator" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="vmOptions" value="-Dmaven.multiModuleProjectDirectory=$M2_HOME" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
@@ -164,6 +317,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -192,7 +346,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spider" />
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -206,18 +360,153 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="spider" />
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conf" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com.suny.storage.mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="suny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="novel-spider" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="suny" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="storage" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -227,34 +516,39 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="options.lastSelected" value="preferences.lookFeel" />
+    <property name="options.lastSelected" value="MavenSettings" />
     <property name="options.splitter.main.proportions" value="0.2825" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.37974682" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="confi&#9;FILE&#9;file://D:/workspace/novel-spider/spider/src/main/java/com/suny/configuration/Configuration.java&#10;HashMap&#9;PSI&#9;JAVA://java.util.HashMap&#10;StringUtils&#9;PSI&#9;JAVA://org.apache.commons.codec.binary.StringUtils" />
+    <property name="SearchEverywhereHistoryKey" value="novel&#9;PSI&#9;JAVA://com.suny.entites.Novel&#10;confi&#9;FILE&#9;file://D:/workspace/novel-spider/spider/src/main/java/com/suny/configuration/Configuration.java&#10;HashMap&#9;PSI&#9;JAVA://java.util.HashMap&#10;StringUtils&#9;PSI&#9;JAVA://org.apache.commons.codec.binary.StringUtils" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="prop_add_unversioned_files" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\novel-spider\storage\src\main\resources" />
       <recent name="D:\workspace\novel-spider\spider\src" />
       <recent name="D:\workspace\novel-spider\spider\src\main\java" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
       <recent name="junit.framework.TestCase" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\novel-spider\storage\src\main\resources\com.suny.storage.mapper" />
+      <recent name="D:\workspace\novel-spider\storage\src\main\resources" />
+      <recent name="D:\workspace\novel-spider\spider\src\main\resources" />
       <recent name="D:\workspace\novel-spider\spider" />
       <recent name="D:\workspace\novel-spider\spider\src" />
     </key>
@@ -262,37 +556,12 @@
       <recent name="com.suny.impl" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.suny.storage.mapper" />
       <recent name="com.suny.impl.novel" />
       <recent name="com.suny.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.KanShuZhongNovelSpiderTest.testKanShuZhongNovelSpiderTest1">
-    <configuration default="false" name="DefaultChapterSpiderTest.KanShuZhongNovelSpiderTest1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spider" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="PACKAGE_NAME" value="com.suny.impl" />
-      <option name="MAIN_CLASS_NAME" value="com.suny.impl.DefaultChapterSpiderTest" />
-      <option name="METHOD_NAME" value="KanShuZhongNovelSpiderTest1" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <ConfigurationWrapper RunnerId="Debug" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.NovelMapperTest.test1">
     <configuration default="false" name="DefaultChapterSpiderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spider" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -370,7 +639,65 @@
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="BxwxNovelSpiderTest.testBxwxGetsNovel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spider" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.suny.impl.novel" />
+      <option name="MAIN_CLASS_NAME" value="com.suny.impl.novel.BxwxNovelSpiderTest" />
+      <option name="METHOD_NAME" value="testBxwxGetsNovel" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="NovelMapperTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="storage" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="PACKAGE_NAME" value="com.suny.storage.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.suny.storage.mapper.NovelMapperTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -439,6 +766,28 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
       <envs />
       <method />
@@ -483,18 +832,20 @@
       <envs />
       <method />
     </configuration>
-    <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.DefaultChapterSpiderTest.KanShuZhongNovelSpiderTest1" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DefaultChapterSpiderTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest.testKanShuZhongNovelSpiderTest1" />
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.DefaultChapterSpiderTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest.testKanShuZhongNovelSpiderTest1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.BxwxNovelSpiderTest.testBxwxGetsNovel" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.NovelMapperTest.test1" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest.testKanShuZhongNovelSpiderTest1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DefaultChapterSpiderTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DefaultChapterSpiderTest.KanShuZhongNovelSpiderTest1" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.NovelMapperTest.test1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BxwxNovelSpiderTest.testBxwxGetsNovel" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest.testKanShuZhongNovelSpiderTest1" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelSpiderTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.DefaultChapterSpiderTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -535,36 +886,36 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42459017" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="20" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51967216" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51967216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37127978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2715774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296131" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24906133" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24906133" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5639881" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4918033" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5098361" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -655,7 +1006,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="106" />
+      <option name="time" value="123" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -663,6 +1014,9 @@
         <watch expression="calendar.get(field)" />
         <watch expression="calendar.get(field)+&quot; &quot;" />
         <watch expression="dateStr instanceof String " language="JAVA" custom="" />
+        <watch expression="tr.getElementsByTag(&quot;td&quot;)" />
+        <watch expression="trs.get(index)" />
+        <watch expression="inputStream" />
       </configuration>
     </watches-manager>
   </component>
@@ -671,173 +1025,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/javax/lang/model/element/Element.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.250457" vertical-offset="2418" max-vertical-offset="4440">
-          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/com/sun/xml/internal/ws/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1438849" vertical-offset="0" max-vertical-offset="760">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/concurrent/ExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.7039585" vertical-offset="6939" max-vertical-offset="7520">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="15.231317" vertical-offset="0" max-vertical-offset="14340">
-          <caret line="237" column="12" selection-start-line="237" selection-start-column="12" selection-end-line="237" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Set.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8505338" vertical-offset="700" max-vertical-offset="7920">
-          <caret line="84" column="17" selection-start-line="84" selection-start-column="17" selection-end-line="84" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33096084" vertical-offset="5867" max-vertical-offset="23260">
-          <caret line="324" column="11" selection-start-line="324" selection-start-column="11" selection-end-line="324" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4733096" vertical-offset="2007" max-vertical-offset="47240">
-          <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/entites/Chapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24647887" vertical-offset="0" max-vertical-offset="1460">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/entites/ChapterDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49295774" vertical-offset="0" max-vertical-offset="1820">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/ChapterDetailSpiderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89672977" vertical-offset="39" max-vertical-offset="820">
-          <caret line="28" column="58" selection-start-line="28" selection-start-column="58" selection-end-line="28" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/ChapterSpiderFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30981067" vertical-offset="300" max-vertical-offset="1060">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/BxwxChapterSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="840">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/DefaultChapterDetailSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.103270225" vertical-offset="0" max-vertical-offset="581">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/DefaultChapterSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.068846814" vertical-offset="0" max-vertical-offset="581">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/utils/NovelSpiderHttpGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3786575" vertical-offset="0" max-vertical-offset="1240">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/interfaces/IChapterSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27538726" vertical-offset="0" max-vertical-offset="581">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/interfaces/IChapterDetailSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48192772" vertical-offset="0" max-vertical-offset="581">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.068846814" vertical-offset="0" max-vertical-offset="581">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/configuration/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7569444" vertical-offset="664" max-vertical-offset="1540">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/download/NovelDownload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31866196" vertical-offset="279" max-vertical-offset="2180">
-          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/interfaces/INovelDownload.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31101513" vertical-offset="36" max-vertical-offset="500">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/TimeZone.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46220303" vertical-offset="11666" max-vertical-offset="16560">
-          <caret line="637" column="9" selection-start-line="637" selection-start-column="9" selection-end-line="637" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/GregorianCalendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37580994" vertical-offset="10666" max-vertical-offset="65180">
-          <caret line="590" column="32" selection-start-line="590" selection-start-column="32" selection-end-line="590" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33261338" vertical-offset="1726" max-vertical-offset="26920">
           <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -852,7 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33261338" vertical-offset="1886" max-vertical-offset="19940">
           <caret line="151" column="43" selection-start-line="151" selection-start-column="43" selection-end-line="151" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -860,166 +1050,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07343412" vertical-offset="41766" max-vertical-offset="62780">
           <caret line="2125" column="31" selection-start-line="2125" selection-start-column="31" selection-end-line="2125" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/entites/Novel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7300216" vertical-offset="142" max-vertical-offset="2760">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/BxwxNovelSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="717" max-vertical-offset="1460">
-          <caret line="51" column="24" selection-start-line="51" selection-start-column="24" selection-end-line="51" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36625513" vertical-offset="2931" max-vertical-offset="5640">
           <caret line="194" column="52" selection-start-line="194" selection-start-column="52" selection-end-line="194" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36328125" vertical-offset="107" max-vertical-offset="520">
           <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar!/org/apache/http/impl/execchain/HttpResponseProxy.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar!/org/apache/http/impl/execchain/HttpResponseProxy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36328125" vertical-offset="867" max-vertical-offset="2980">
           <caret line="63" column="22" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/AbstractChapterDetailSpider.java">
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/chapter/AbstractChapterDetailSpider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.672598" vertical-offset="1011" max-vertical-offset="1780">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/chapter/AbstractChapterSpider.java">
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/chapter/AbstractChapterSpider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.95729536" vertical-offset="211" max-vertical-offset="1400">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/enums/NovelSiteEnum.java">
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/enums/NovelSiteEnum.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.55516" vertical-offset="0" max-vertical-offset="1540">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/test/java/com/suny/impl/DefaultChapterSpiderTest.java">
+    <entry file="file://$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/DefaultChapterSpiderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9288256" vertical-offset="179" max-vertical-offset="1300">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/AbstractSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0895522" vertical-offset="0" max-vertical-offset="820">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/AbstractNovelSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14234875" vertical-offset="0" max-vertical-offset="1660">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/conf/Spider-Rule.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21708184" vertical-offset="59" max-vertical-offset="1060">
-          <caret line="6" column="72" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/Factory/NovelSpiderFactory.java">
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/Factory/NovelSpiderFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33096084" vertical-offset="327" max-vertical-offset="780">
           <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/interfaces/INovelSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40213522" vertical-offset="107" max-vertical-offset="640">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/JUnit38ClassRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36328125" vertical-offset="247" max-vertical-offset="3340">
           <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-sources.jar!/org/jsoup/select/Elements.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-sources.jar!/org/jsoup/select/Elements.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34701493" vertical-offset="10267" max-vertical-offset="10840">
           <caret line="522" column="0" selection-start-line="522" selection-start-column="0" selection-end-line="522" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runner/JUnitCore.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36328125" vertical-offset="967" max-vertical-offset="1740">
           <caret line="68" column="18" selection-start-line="68" selection-start-column="18" selection-end-line="68" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-sources.jar!/org/jsoup/helper/Validate.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-sources.jar!/org/jsoup/helper/Validate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33096084" vertical-offset="1747" max-vertical-offset="2360">
           <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Soft/apache-maven-3.3.9/repository/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-sources.jar!/org/jsoup/nodes/Element.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.7.2/jsoup-1.7.2-sources.jar!/org/jsoup/nodes/Element.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33208954" vertical-offset="10751" max-vertical-offset="22880">
           <caret line="550" column="0" selection-start-line="550" selection-start-column="0" selection-end-line="550" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1027,44 +1148,273 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.4440298" vertical-offset="10427" max-vertical-offset="47920">
           <caret line="554" column="11" selection-start-line="554" selection-start-column="11" selection-end-line="554" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/utils/NovelSpiderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5851979" vertical-offset="2400" max-vertical-offset="4280">
+          <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/conf/Spider-Rule.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42446044" vertical-offset="524" max-vertical-offset="1100">
+          <caret line="38" column="27" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/utils/NovelSpiderUtil.java">
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5851979" vertical-offset="2400" max-vertical-offset="4280">
-          <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.110497236" vertical-offset="120" max-vertical-offset="820">
+          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/interfaces/INovelSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="980">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.8/mysql-connector-java-5.1.8.pom">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.056338027" vertical-offset="32" max-vertical-offset="780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/novel/KanShuZhongNovelSpiderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55776894" vertical-offset="0" max-vertical-offset="480">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/novel/BxwxNovelSpiderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4130809" vertical-offset="0" max-vertical-offset="620">
+          <caret line="12" column="11" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="581">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/configuration/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8932874" vertical-offset="0" max-vertical-offset="1540">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/src/main/resources/generatorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1160">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="440">
+          <caret line="12" column="32" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.44366196" vertical-offset="472" max-vertical-offset="1400">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38732395" vertical-offset="0" max-vertical-offset="1580">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8450704" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/entites/Novel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.5422535" vertical-offset="0" max-vertical-offset="3020">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25" vertical-offset="38" max-vertical-offset="1500">
+          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/io/InputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18181819" vertical-offset="332" max-vertical-offset="7000">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2800">
+          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/org/xml/sax/helpers/DefaultHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="9160">
+          <caret line="82" column="0" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/io/ClassLoaderWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="4080">
+          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/io/Resources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3307393" vertical-offset="1455" max-vertical-offset="5120">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/org/xml/sax/InputSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3307393" vertical-offset="3715" max-vertical-offset="6740">
+          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/builder/xml/XMLMapperEntityResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3307393" vertical-offset="635" max-vertical-offset="1360">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/parsing/XPathParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3307393" vertical-offset="1695" max-vertical-offset="4820">
+          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/builder/xml/XMLConfigBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3307393" vertical-offset="675" max-vertical-offset="7180">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1195" max-vertical-offset="1580">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/BlockJUnit4ClassRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3307393" vertical-offset="475" max-vertical-offset="8200">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/runners/ParentRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4202335" vertical-offset="295" max-vertical-offset="8220">
+          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+          <folding>
+            <element signature="e#11040#11204#0" expanded="true" />
+            <element signature="e#11203#11204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="480">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/src/main/java/com/suny/storage/mapper/NovelMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31128404" vertical-offset="0" max-vertical-offset="640">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/mapper/NovelMapperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="540">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/impl/novel/KanShuZhongNovelSpider.java">
+    <entry file="file://$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1408451" vertical-offset="12" max-vertical-offset="1120">
-          <caret line="33" column="48" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/test/java/com/suny/impl/novel/KanShuZhongNovelSpiderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30981067" vertical-offset="0" max-vertical-offset="581">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="520">
+          <caret line="18" column="59" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0852714" vertical-offset="0" max-vertical-offset="660">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.71" vertical-offset="196" max-vertical-offset="680">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1090,7 +1440,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37974682" />
               </list>
             </option>
           </splitter-proportions>
@@ -1098,11 +1448,10 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Apache</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37974682" />
               </list>
             </option>
           </splitter-proportions>
@@ -1110,7 +1459,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1122,11 +1471,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>novel-spider</last-edited>
+          <last-edited>storage</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37974682" />
                 <option value="0.6" />
               </list>
             </option>
@@ -1151,12 +1500,15 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.37974682" />
               </list>
             </option>
           </splitter-proportions>
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
   </component>
 </project>

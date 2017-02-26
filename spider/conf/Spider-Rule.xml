@@ -33,6 +33,7 @@
 		<chapter-detail-prev-selector>.readlink a,1</chapter-detail-prev-selector>
 		<chapter-detail-next-selector>.readlink a,3</chapter-detail-next-selector>
 		<novel-selector>.book_list tr</novel-selector>
+		<novel-next-page-selector>#pagelink .next</novel-next-page-selector>
 	</site>
 	<site>
 		<title>笔下文学</title>
@@ -44,5 +45,6 @@
 		<chapter-detail-prev-selector>#footlink a,2</chapter-detail-prev-selector>
 		<chapter-detail-next-selector>#footlink a,4</chapter-detail-next-selector>
 		<novel-selector>.grid tr</novel-selector>
+		<novel-next-page-selector>#pagelink .next</novel-next-page-selector>
 	</site>
 </sites>
