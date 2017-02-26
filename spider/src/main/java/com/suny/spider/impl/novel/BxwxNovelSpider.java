@@ -29,7 +29,7 @@ public class BxwxNovelSpider extends AbstractNovelSpider {
     public List<Novel> getsNovel(String url, Integer maxTryTimes) {
         List<Novel> novelList = new ArrayList<>();
         try {
-            Elements trs = super.getsTr(url, 2);    // 传入url解析tr标签列表
+            Elements trs = super.getsTr(url, maxTryTimes);    // 传入url解析tr标签列表
             for (int index = 1, size = trs.size(); index < size; index++) {
                 Element tr = trs.get(index);    //获取tr标签集合中的对应下标集合
                 Elements tds = tr.getElementsByTag("td");   // 获取一个tr标签中的td标签集合

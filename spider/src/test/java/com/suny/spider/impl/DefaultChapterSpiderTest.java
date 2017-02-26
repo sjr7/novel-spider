@@ -1,6 +1,16 @@
 package com.suny.spider.impl;
 
+import com.suny.spider.configuration.Configuration;
+import com.suny.spider.entites.Chapter;
+import com.suny.spider.enums.NovelSiteEnum;
+import com.suny.spider.impl.chapter.DefaultChapterSpider;
+import com.suny.spider.impl.download.NovelDownload;
+import com.suny.spider.interfaces.IChapterSpider;
+import com.suny.spider.interfaces.INovelDownload;
+import com.suny.spider.utils.NovelSpiderUtil;
 import junit.framework.TestCase;
+
+import java.util.List;
 
 public class DefaultChapterSpiderTest extends TestCase {
 
@@ -9,7 +19,7 @@ public class DefaultChapterSpiderTest extends TestCase {
 
 
 
-   /*
+
 
     public void testDownload() {
         INovelDownload download = new NovelDownload();
@@ -36,11 +46,9 @@ public class DefaultChapterSpiderTest extends TestCase {
         IChapterSpider chapterSpider = new DefaultChapterSpider();
         System.out.println("start visit website");
         List<Chapter> chapterList = chapterSpider.getChapter("http://www.biquge.tw/0_5/");
-        for (Chapter chapter : chapterList) {
-            System.out.println(chapter);
-        }
+        chapterList.forEach(System.out::println);
 
     }
-   */
+
 
 }

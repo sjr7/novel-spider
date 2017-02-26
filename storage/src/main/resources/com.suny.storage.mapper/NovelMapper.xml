@@ -107,6 +107,18 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
+  <insert id="batchInsert" parameterType="java.util.List">
+    INSERT INTO tbl_novel
+    (id,name,author,url,type,last_update_chapter,last_update_chapter_url,
+    last_update_time,status,first_letter,platform_id)
+    VALUES
+    <foreach collection="list" index="index" item="item" separator=",">
+      (
+      #{item.id},#{item.name},#{item.author},#{item.url},#{item.type},#{item.lastUpdateChapter},#{item.lastUpdateChapterUrl},
+      #{item.lastUpdateTime},#{item.status},#{item.firstLetter},#{item.platformId}
+      )
+    </foreach>
+  </insert>
   <insert id="insert" parameterType="com.suny.spider.entites.Novel" >
     insert into novel (id, name, author, 
       url, type, last_update_chapter, 
