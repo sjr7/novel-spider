@@ -108,7 +108,7 @@
     </if>
   </delete>
   <insert id="batchInsert" parameterType="java.util.List">
-    INSERT INTO tbl_novel
+    INSERT INTO novel
     (id,name,author,url,type,last_update_chapter,last_update_chapter_url,
     last_update_time,status,first_letter,platform_id)
     VALUES

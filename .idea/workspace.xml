@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f73c4004-8bfc-4854-ab14-55ad33f2c87d" name="Default" comment="完成简单的抓取，可以小说一章节的内容">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/AbstractNovelStorage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/BxwxNovelStorageImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/BxwxNovelStorageImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/KanShuZhongNovelStorageImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/KanShuZhongNovelStorageImplTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/interfaces/Processor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/conf/Spider-Rule.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/storage/src/main/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/DefaultChapterSpiderTest.java" afterPath="$PROJECT_DIR$/spider/src/test/java/com/suny/spider/impl/DefaultChapterSpiderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java" afterPath="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/mapper/NovelMapper.java" afterPath="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/mapper/NovelMapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/src/main/resources/com.suny.storage.mapper/NovelMapper.xml" afterPath="$PROJECT_DIR$/storage/src/main/resources/com.suny.storage.mapper/NovelMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml" afterPath="$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/pom.xml" afterPath="$PROJECT_DIR$/storage/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/storage/storage.iml" afterPath="$PROJECT_DIR$/storage/storage.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="novel-spider.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,31 +46,19 @@
       <file leaf-file-name="AbstractNovelSpider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1726" max-vertical-offset="2800">
-              <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1102" max-vertical-offset="2800">
+              <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractSpider.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AbstractSpider.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="466" max-vertical-offset="820">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="405" max-vertical-offset="820">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BxwxNovelStorageImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/BxwxNovelStorageImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="460">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -98,9 +66,48 @@
       <file leaf-file-name="NovelSpiderUtil.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/utils/NovelSpiderUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2897" max-vertical-offset="4100">
-              <caret line="164" column="7" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3045" max-vertical-offset="4100">
+              <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KanShuZhongNovelStorageImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/KanShuZhongNovelStorageImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="360">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KanShuZhongNovelSpider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="1020">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NovelMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storage/src/main/resources/com.suny.storage.mapper/NovelMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2277" max-vertical-offset="6800">
+              <caret line="114" column="71" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="71" />
+              <folding>
+                <marker date="1488170509730" expanded="true" signature="4186:4286" placeholder="select from ..novel..." />
+                <marker date="1488170509730" expanded="true" signature="4370:4424" placeholder="delete from ..." />
+                <marker date="1488170509730" expanded="true" signature="4527:4544" placeholder="delete from ..." />
+                <marker date="1488170509730" expanded="true" signature="5268:5849" placeholder="insert into ..." />
+                <marker date="1488170509730" expanded="true" signature="8089:8115" placeholder="select count..novel..." />
+                <marker date="1488170509730" expanded="true" signature="9849:10525" placeholder="update novel..." />
+                <marker date="1488170509730" expanded="true" signature="10736:11916" placeholder="update novel..." />
+                <marker date="1488170509730" expanded="true" signature="12015:12610" placeholder="update novel..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -108,8 +115,8 @@
       <file leaf-file-name="AbstractNovelStorage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/AbstractNovelStorage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="1900">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1900">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -117,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BxwxNovelSpider.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BxwxNovelSpider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.47517732" vertical-offset="646" max-vertical-offset="1500">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="1500">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -178,7 +185,6 @@
         <option value="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/KanShuZhongNovelStorageImpl.java" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java" />
-        <option value="$PROJECT_DIR$/storage/src/main/resources/com.suny.storage.mapper/NovelMapper.xml" />
         <option value="$PROJECT_DIR$/storage/src/main/java/com/suny/storage/mapper/NovelMapper.java" />
         <option value="$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml" />
         <option value="$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java" />
@@ -186,6 +192,7 @@
         <option value="$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/BxwxNovelStorageImplTest.java" />
         <option value="$PROJECT_DIR$/storage/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/storage/pom.xml" />
+        <option value="$PROJECT_DIR$/storage/src/main/resources/com.suny.storage.mapper/NovelMapper.xml" />
       </list>
     </option>
   </component>
@@ -953,7 +960,7 @@
     <property name="options.splitter.main.proportions" value="0.2775" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="last_opened_file_path" value="$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.8/mysql-connector-java-5.1.8.jar" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.37974682" />
     <property name="OverrideImplement.combined" value="true" />
@@ -996,7 +1003,7 @@
       <recent name="com.suny.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BxwxNovelStorageImplTest.testBxwxProcess">
+  <component name="RunManager" selected="JUnit.KanShuZhongNovelStorageImplTest.test">
     <configuration default="false" name="BxwxNovelSpiderTest.testBxwxGetsNovel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="spider" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1280,8 +1287,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.BxwxNovelStorageImplTest.testBxwxProcess" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelStorageImplTest.test" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.KanShuZhongNovelStorageImplTest.test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.BxwxNovelStorageImplTest.testBxwxProcess" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.DefaultChapterSpiderTest.test" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.NovelMapperTest.test1" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.BxwxNovelSpiderTest.testBxwxGetsNovel" />
@@ -1342,14 +1349,14 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel remote servers log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26785713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26785713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296131" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24906133" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5639881" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46885246" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4852459" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1445,98 +1452,21 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>76</line>
+          <url>file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/KanShuZhongNovelStorageImplTest.java</url>
+          <line>12</line>
           <properties />
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="149" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java</url>
-          <line>28</line>
-          <properties />
-          <option name="timeStamp" value="150" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java</url>
-          <line>32</line>
-          <properties />
-          <option name="timeStamp" value="151" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="152" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>86</line>
-          <properties />
-          <option name="timeStamp" value="154" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="156" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>88</line>
-          <properties />
-          <option name="timeStamp" value="157" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>90</line>
-          <properties />
-          <option name="timeStamp" value="158" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>91</line>
-          <properties />
-          <option name="timeStamp" value="159" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/BxwxNovelStorageImplTest.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="174" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/utils/NovelSpiderUtil.java</url>
-          <line>166</line>
-          <properties />
-          <option name="timeStamp" value="175" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java</url>
-          <line>80</line>
-          <properties />
-          <option name="timeStamp" value="176" />
+          <option name="timeStamp" value="177" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="177" />
+      <option name="time" value="185" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="context.get(&quot;novel-selector&quot;)" />
+        <watch expression="tds.get(1).text()" />
       </configuration>
     </watches-manager>
   </component>
@@ -1801,14 +1731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/src/main/resources/com.suny.storage.mapper/NovelMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3901515" vertical-offset="2157" max-vertical-offset="6800">
-          <caret line="113" column="10" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/src/main/resources/SqlMapConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="520">
@@ -1832,28 +1754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/KanShuZhongNovelStorageImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0" vertical-offset="36" max-vertical-offset="420">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/BxwxNovelStorageImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3030303" vertical-offset="60" max-vertical-offset="880">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.7888446" vertical-offset="769" max-vertical-offset="1020">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1874,34 +1778,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/utils/NovelSpiderUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2897" max-vertical-offset="4100">
-          <caret line="164" column="7" selection-start-line="164" selection-start-column="7" selection-end-line="164" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/BxwxNovelStorageImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="460">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/AbstractNovelStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="1900">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2-sources.jar!/org/apache/http/impl/client/HttpClientBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334" vertical-offset="2046" max-vertical-offset="22460">
@@ -1910,26 +1786,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java">
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="466" max-vertical-offset="820">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="406" max-vertical-offset="1500">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/BxwxNovelStorageImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48192772" vertical-offset="0" max-vertical-offset="581">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/src/main/java/com/suny/storage/impl/AbstractNovelStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="1900">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/src/main/resources/com.suny.storage.mapper/NovelMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2277" max-vertical-offset="6800">
+          <caret line="114" column="71" selection-start-line="114" selection-start-column="71" selection-end-line="114" selection-end-column="71" />
+          <folding>
+            <marker date="1488170509730" expanded="true" signature="4186:4286" placeholder="select from ..novel..." />
+            <marker date="1488170509730" expanded="true" signature="4370:4424" placeholder="delete from ..." />
+            <marker date="1488170509730" expanded="true" signature="4527:4544" placeholder="delete from ..." />
+            <marker date="1488170509730" expanded="true" signature="5268:5849" placeholder="insert into ..." />
+            <marker date="1488170509730" expanded="true" signature="8089:8115" placeholder="select count..novel..." />
+            <marker date="1488170509730" expanded="true" signature="9849:10525" placeholder="update novel..." />
+            <marker date="1488170509730" expanded="true" signature="10736:11916" placeholder="update novel..." />
+            <marker date="1488170509730" expanded="true" signature="12015:12610" placeholder="update novel..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/AbstractNovelSpider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1726" max-vertical-offset="2800">
-          <caret line="104" column="0" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1162" max-vertical-offset="2800">
+          <caret line="77" column="44" selection-start-line="77" selection-start-column="44" selection-end-line="77" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/BxwxNovelSpider.java">
+    <entry file="file://$PROJECT_DIR$/storage/src/test/java/com/suny/storage/impl/KanShuZhongNovelStorageImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47517732" vertical-offset="646" max-vertical-offset="1500">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="360">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/novel/KanShuZhongNovelSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="250" max-vertical-offset="1020">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/utils/NovelSpiderUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3045" max-vertical-offset="4100">
+          <caret line="166" column="0" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spider/src/main/java/com/suny/spider/impl/AbstractSpider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="405" max-vertical-offset="820">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1955,7 +1892,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37974682" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1966,7 +1903,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37974682" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -2015,7 +1952,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.37974682" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
