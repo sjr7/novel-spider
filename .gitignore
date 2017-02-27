@@ -14,15 +14,17 @@
 *.jar
 *.war
 *.ear
-
+*.iml
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 .gitignore
 
+out/
 spider/spider.iml
 novel-spider.iml
-spider/target
-storage/target
-/target
+spider/target/
+storage/target/
+web/target/
+/target/
 #pom.xml
 #spider/

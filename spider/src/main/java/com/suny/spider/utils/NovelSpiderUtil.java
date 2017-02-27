@@ -34,9 +34,11 @@ public final class NovelSpiderUtil {
     private static void init() {
         // 使用SAX进行解析
         SAXReader saxReader = new SAXReader();
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = classLoader.getResourceAsStream("conf/Spider-Rule.xml");
         try {
 
-            Document document = saxReader.read(new File("conf/Spider-Rule.xml"));     //解析的配置文件
+            Document document = saxReader.read(inputStream);     //解析的配置文件
             Element root = document.getRootElement();    //获取根元素
             List<Element> sites = root.elements("site");   //获取site标签下的元素
             for (Element site : sites) {
@@ -53,6 +55,35 @@ public final class NovelSpiderUtil {
             e.printStackTrace();
         }
 
+    }
+
+    /**
+     * 单独抽取一个方法设置读取配置文件路径
+     *
+     * @param path 配置文件路径
+     */
+    public static void setConfigPath(String path) {
+        // 使用SAX进行解析
+        SAXReader saxReader = new SAXReader();
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = classLoader.getResourceAsStream(path);
+        try {
+            Document document = saxReader.read(inputStream);     //解析的配置文件
+            Element root = document.getRootElement();    //获取根元素
+            List<Element> sites = root.elements("site");   //获取site标签下的元素
+            for (Element site : sites) {
+                List<Element> elements = site.elements();   //获取site下的元素
+                Map<String, String> stringMap = new HashMap<>();
+                for (Element element : elements) {
+                    String name = element.getName();   //获取小说站点名字
+                    String text = element.getTextTrim();    //获取文本
+                    stringMap.put(name, text);   //放入集合
+                }
+                CONTEXT_MAP.put(NovelSiteEnum.getEnumByUrl(stringMap.get("url")), stringMap);
+            }
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -127,9 +158,10 @@ public final class NovelSpiderUtil {
     }
 
     /**
-     *  格式化字符串常量为如期对象
-     * @param dateStr   日期字符串
-     * @param pattern   转换规则
+     * 格式化字符串常量为如期对象
+     *
+     * @param dateStr 日期字符串
+     * @param pattern 转换规则
      * @return
      * @throws ParseException
      */
@@ -154,28 +186,25 @@ public final class NovelSpiderUtil {
      */
     public static String getDateField(int field) {
         Calendar calendar = new GregorianCalendar();
-        return calendar.get(field)+"";    // 自动转化为String对象
+        return calendar.get(field) + "";    // 自动转化为String对象
     }
 
 
     /**
      * 获取书籍的状态
-     * @param status   状态值
+     *
+     * @param status 状态值
      * @return
      */
-    public static int getNovelStatus(String status){
-        if(status.contains("连载")) {
+    public static int getNovelStatus(String status) {
+        if (status.contains("连载")) {
             return 1;
-        }
-        else if( status.contains("完结")|| status.contains("完成")) {
+        } else if (status.contains("完结") || status.contains("完成")) {
             return 2;
-        }
-        else {
+        } else {
             throw new RuntimeException("this is not support by status" + status);
         }
     }
-
-
 
 
 }
