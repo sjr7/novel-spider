@@ -19,6 +19,7 @@
       <configuration>
         <fileset id="fileset" name="Spring Application Context" removed="false">
           <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/src/main/resources/Spring/Spring-Mybatis.xml</file>
         </fileset>
       </configuration>
     </facet>
@@ -50,7 +51,7 @@
     <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.2.1.Final" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml:classmate:1.1.0" level="project" />
-    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.3" level="project" />
+    <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:4.3.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.6.RELEASE" level="project" />

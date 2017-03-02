@@ -3,10 +3,18 @@ package com.suny.web.mapper;
 import com.suny.spider.entites.Novel;
 import com.suny.spider.entites.NovelExample;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
+@Repository
 public interface NovelMapper {
+
+    List<Novel> getsNovelByKeyword2(Map<String,String> stringStringMap);
+
+    List<Novel> getsNovelByKeyword(String keyword);
+
     int countByExample(NovelExample example);
 
     int deleteByExample(NovelExample example);

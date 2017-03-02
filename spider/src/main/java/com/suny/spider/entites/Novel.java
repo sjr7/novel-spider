@@ -126,6 +126,22 @@ public class Novel {
     public Novel() {
     }
 
+
+    public Novel(Long id, String name, String author, String url, String type, String lastUpdateChapter, String lastUpdateChapterUrl, Integer status, String firstLetter, Integer platformId, Date addtime, Date lastUpdateTime) {
+        this.id = id;
+        this.name = name;
+        this.author = author;
+        this.url = url;
+        this.type = type;
+        this.lastUpdateChapter = lastUpdateChapter;
+        this.lastUpdateChapterUrl = lastUpdateChapterUrl;
+        this.status = status;
+        this.firstLetter = firstLetter;
+        this.platformId = platformId;
+        this.addtime = addtime;
+        this.lastUpdateTime = lastUpdateTime;
+    }
+
     @Override
     public String toString() {
         return "Novel{" +
