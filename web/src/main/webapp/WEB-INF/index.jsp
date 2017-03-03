@@ -39,6 +39,20 @@
         #chapterList {
             border: solid cornflowerblue 1px;
             margin: 0 auto;
+            padding: 20px;
+        }
+
+        tr {
+            padding-top: 10px;
+        }
+
+        td {
+            padding-left: 40px;
+        }
+
+        a {
+            text-decoration: none;
+
         }
     </style>
 </head>
@@ -53,7 +67,7 @@
 <label for="platformId">
     <input type="text" id="platformId" name="platformId">
 </label>
-<input id="submitButton" value="搜索下"/>
+<input type="button" id="submitButton" value="搜索下"/>
 
 
 <div id="content">
@@ -106,9 +120,9 @@
     function getPlatform(statusId) {
         switch (statusId) {
             case 3 :
-                return "笔下文学";
-            case 4:
                 return "看书中";
+            case 4:
+                return "笔下文学";
             default :
                 return "无法判断";
         }
@@ -144,15 +158,17 @@
                     }
                     // 小说的链接
                     var Novelia = document.createElement("a");
-                    Novelia.href = "showChapterList?url="+json.data[j].url;
+                    Novelia.href = "showChapterList?url=" + json.data[j].url + "&novelName=" + json.data[j].name;
                     Novelia.innerHTML = json.data[j].name;
                     tds[0].appendChild(Novelia);                 // 设置小说的链接
 
                     tds[1].innerHTML = json.data[j].author;           //作者
+
                     var NovelLastUrl = document.createElement("a");
-                    NovelLastUrl.href = json.data[j].lastUpdateChapterUrl;   //最后更新一章的url
+                    NovelLastUrl.href = "showNovelDetail?url=" + json.data[j].lastUpdateChapterUrl + "&baseUrl=" + Novelia.href;   //最后更新一章的url
                     NovelLastUrl.innerHTML = json.data[j].lastUpdateChapter;  //最后一章的标题
                     tds[2].appendChild(NovelLastUrl);
+
                     tds[3].innerHTML = getStatus(json.data[j].status);             //状态
                     tds[4].innerHTML = formatDate(json.data[j].lastUpdateTime);       //最后一章更新的时间
                     tds[5].innerHTML = getPlatform(json.data[j].platformId);        //平台的id

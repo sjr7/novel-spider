@@ -13,22 +13,46 @@
 %>
 <html>
 <head>
-    <title></title>
+    <title>${novelName}</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        table{
+            border: 1px solid darkcyan;
+        }
+        #title{
+            text-align: center;
+
+        }
+    </style>
 </head>
 <body>
 <div>
     <a href="index">返回首页</a>
 </div>
-<table>
-   <tr >小说列表</tr>
-            <c:forEach items="${chapterList}" var="chapter">
-    <tr>
-        <td>
-            <a href="showNovelDetail?url=${chapter.url}&baseUrl=${baseUrl}">${chapter.title}</a>
-        </td>
-    </tr>
-            </c:forEach>
+<table >
+    <h2 id="title">${novelName}</h2>
 
+    <c:forEach items="${chapterList}" var="chapter" varStatus="index">
+        <c:if test="${index.count% 5 == 0}">
+            <tr>
+        </c:if>
+
+        <c:if test="${index.count %5 != 0}">
+            <td>
+                <a href="showNovelDetail?url=${chapter.url}&baseUrl=${baseUrl}">${chapter.title}</a>
+            </td>
+
+        </c:if>
+
+        <c:if test="${index.count% 5 == 0}">
+            </tr>
+
+        </c:if>
+
+
+    </c:forEach>
 
 
 </table>

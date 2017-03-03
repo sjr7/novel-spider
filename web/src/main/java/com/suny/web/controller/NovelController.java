@@ -33,16 +33,24 @@ public class NovelController {
         NovelSpiderUtil.setConfigPath("conf/Spider-Rule.xml");
     }
 
+
+    /**
+     * 请求对应的一章的数据
+     *
+     * @param url     章节的url地址
+     * @param baseUrl 域名的前缀
+     * @return 返回的页面地址跟数据
+     */
     @RequestMapping(value = "/showNovelDetail", method = RequestMethod.GET)
     public ModelAndView showNovelDetail(String url, String baseUrl) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/NovelDetail");
-        ChapterDetail chapterDetail = null;
+        ChapterDetail chapterDetail;
         try {
             chapterDetail = ChapterDetailSpiderFactory.getChapterDetailSpider(url).getChapterDetail(url);
             modelAndView.getModel().put("chapterDetail", chapterDetail);
             modelAndView.getModel().put("isSuccess", true);
-            chapterDetail.setContent(chapterDetail.getContent().replaceAll("\n","<br>"));
+            //chapterDetail.setContent(chapterDetail.getContent().replaceAll("\n", "<br>"));
         } catch (Exception e) {
             e.printStackTrace();
             modelAndView.getModel().put("isSuccess", false);
@@ -53,11 +61,17 @@ public class NovelController {
 
     }
 
-
+    /**
+     * 请求小说的章节列表
+     *
+     * @param url 小说的url地址
+     * @return 章节json数据
+     */
     @RequestMapping(value = "/showChapterList", method = RequestMethod.GET)
-    public ModelAndView showChapterList(String url) {
+    public ModelAndView showChapterList(String url,String novelName) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/ChapterList");
+        modelAndView.getModel().put("novelName",novelName);
         modelAndView.getModel().put("chapterList", ChapterSpiderFactory.getChapterSpider(url).getChapter(url));
         modelAndView.getModel().put("baseUrl", url);
         return modelAndView;
@@ -67,9 +81,9 @@ public class NovelController {
     /**
      * 通过关键字跟平台id进行查询
      *
-     * @param keyword
-     * @param platformId
-     * @return
+     * @param keyword    小说的关键字
+     * @param platformId 小说网站对应的id
+     * @return 关键字跟平台id联合查询的json数据
      */
     @RequestMapping(value = "/getNovelByKeywordAndPlatformId", method = RequestMethod.POST)
     @ResponseBody
@@ -91,8 +105,8 @@ public class NovelController {
     /**
      * 通过关键词搜索
      *
-     * @param keyword
-     * @return
+     * @param keyword 查询的小说关键词
+     * @return 得到的小说列表json数据
      */
     @RequestMapping(value = "/getsNovelByKeyword", method = RequestMethod.POST)
     @ResponseBody
@@ -101,7 +115,12 @@ public class NovelController {
         return JSONResponse.success(novelService.getsNovelByKeyword(keyword));
     }
 
-
+    /**
+     * 请求一本小说
+     *
+     * @param url 请求的小说的地址
+     * @return 小说的json数据
+     */
     @RequestMapping(value = "/chapters", method = RequestMethod.GET)
     @ResponseBody
     public JSONResponse getChapter(String url) {
@@ -110,6 +129,13 @@ public class NovelController {
         return JSONResponse.success(chapterList.get(1));
     }
 
+
+    /**
+     * 得到一章小说的文字
+     *
+     * @param url 章节的url
+     * @return 一章小说的json数据
+     */
     @RequestMapping(value = "/chapterDetail", method = RequestMethod.GET)
     @ResponseBody
     public JSONResponse getChapterDetail(String url) {
@@ -118,6 +144,12 @@ public class NovelController {
         return JSONResponse.success(chapterDetail);
     }
 
+
+    /**
+     * 小说搜索的主页面
+     *
+     * @return 搜索页面
+     */
     @RequestMapping(value = "/index")
     public String index() {
         return "/index";

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Comments:
+ * Comments:   小说抓取逻辑类
  * Author:   孙建荣
  * Create Date: 2017/02/28 16:21
  */
@@ -22,12 +22,26 @@ public class NovelServiceImpl implements INovelService {
     private NovelMapper novelMapper;
 
 
+    /**
+     * 通过查询关键字得到小说列表
+     *
+     * @param keyword 查询的关键字
+     * @return 带关键字的小说列表
+     */
     @Override
     public List<Novel> getsNovelByKeyword(String keyword) {
         keyword = "%" + keyword + "%";
         return novelMapper.getsNovelByKeyword(keyword);
     }
 
+
+    /**
+     * 通过平台id跟小说的关键字进行查询
+     *
+     * @param keyword    指定的关键字
+     * @param platformId 平台id
+     * @return 带两个天剑的小说列表
+     */
     @Override
     public List<Novel> getsNovelByKeyword(String keyword, int platformId) {
         Map<String, String> stringStringMap = new HashMap<>();

@@ -11,6 +11,8 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -44,6 +46,25 @@ public abstract class AbstractChapterSpider extends AbstractSpider implements IC
                 chapter.setUrl(e.absUrl("href"));       // 把url地址放进去
                 chapters.add(chapter);               // 把一个个的章节放到一个章节List里面去
             }
+
+            //笔下文学故意对顺序进行搞乱，我们这里重新排序
+            if (NovelSiteEnum.getEnumByUrl(url).getUrl().equals("bxwx9.org")) {
+
+                Collections.sort(chapters , new Comparator<Chapter>() {
+                    //对小说的章节进行排序
+                    @Override
+                    public int compare(Chapter o1, Chapter o2) {
+                        String o1Url = o1.getUrl();
+                        String o2Url = o2.getUrl();
+                        String o1Index = o1Url.substring(o1Url.lastIndexOf("/") + 1,
+                                o1Url.lastIndexOf("."));
+                        String o2Index = o2Url.substring(o2Url.lastIndexOf("/") + 1,
+                                o2Url.lastIndexOf("."));
+                        return o1Index.compareTo(o2Index);
+                    }
+                });
+            }
+
             return chapters;
         } catch (Exception e) {
             throw new RuntimeException(e);
