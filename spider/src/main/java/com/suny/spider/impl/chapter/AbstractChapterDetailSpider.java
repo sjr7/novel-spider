@@ -22,8 +22,6 @@ public abstract class AbstractChapterDetailSpider extends AbstractSpider impleme
         try {
             String result = super.crwal(url);
             Document document = Jsoup.parse(result);    //解析得到的页面数据
-            FileWriter fileWriter = new FileWriter("d:\\1.txt");
-            fileWriter.write(document.data());
             document.setBaseUri(url);           //设置网站根目录
             Map<String, String> context = NovelSpiderUtil.getContext(NovelSiteEnum.getEnumByUrl(url));   //返回规则
 
@@ -40,37 +38,38 @@ public abstract class AbstractChapterDetailSpider extends AbstractSpider impleme
             String contentSelector = context.get("chapter-detail-content-selector");     //获取章节选择器的内容
             chapterDetail.setContent(document.select(contentSelector).first().html());   //得到章节选择器的第一个下标的文本
 
+            String urlEnum = NovelSiteEnum.getEnumByUrl(url).getUrl();
             //拿到前一章的地址
             String prevSelector = context.get("chapter-detail-prev-selector");    //得到前一章的地址选择器
             splits = prevSelector.split("\\,");    //切割规则
             splits = parseSelector(splits);      //  转换下规则
-
             //   首先选择规则为splits[0]中的内容，splits[0]为规则，splits[1]为规则对应的元素下标
             //  然后再获取下标内容的url地址
-            String prevUrl=document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href");
-            if( prevUrl.contains("index.html") ){
+            String prevUrl = document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href");
+
+            boolean hasPrevPage = prevUrl.contains(".html") && !prevUrl.contains("index.html");
+            //对是否有上一页或者下一页的状态进行判断，有就设置，没有就不设置
+            if (hasPrevPage) {
+                chapterDetail.setPrev(document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href"));
+                chapterDetail.setNextStatus(1);
+            } else {
                 chapterDetail.setPrev(url);
             }
-            else{
-                chapterDetail.setPrev(document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href"));
-            }
-
 
             //拿到后一章的地址
             String nextSelector = context.get("chapter-detail-next-selector");    //得到后一章的地址选择器
             splits = nextSelector.split("\\,");      //切割规则
             splits = parseSelector(splits);    //  转换下规则
-
             String nextUrl = document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href");
-            if( nextUrl.contains("index.html") ){
-                chapterDetail.setNext(url);
-            }
-            else{
+            boolean hasNextPage = nextUrl.contains(".html") && !nextUrl.contains("index.html");
+
+            if (hasNextPage) {
                 chapterDetail.setNext(document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href"));
+                chapterDetail.setNextStatus(1);
+            } else {
+                chapterDetail.setNext(url);
+
             }
-
-
-
             return chapterDetail;    //返回章节对应的信息
 
         } catch (Exception e) {

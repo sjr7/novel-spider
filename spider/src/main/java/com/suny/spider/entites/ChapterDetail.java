@@ -13,6 +13,9 @@ public class ChapterDetail implements Serializable {
     private String content;           //章节正文
     private String prev;             //上一页的url地址
     private String next;             //下一页的url地址
+    private int PrevStatus;       //是否有上一页
+    private int NextStatus;       //是否有上一页
+
 
     public ChapterDetail() {
     }

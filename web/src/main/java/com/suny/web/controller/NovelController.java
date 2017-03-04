@@ -48,6 +48,8 @@ public class NovelController {
         ChapterDetail chapterDetail;
         try {
             chapterDetail = ChapterDetailSpiderFactory.getChapterDetailSpider(url).getChapterDetail(url);
+            modelAndView.getModel().put("PrevStatus", chapterDetail.getPrevStatus());
+            modelAndView.getModel().put("NextStatus", chapterDetail.getNextStatus());
             modelAndView.getModel().put("chapterDetail", chapterDetail);
             modelAndView.getModel().put("isSuccess", true);
             //chapterDetail.setContent(chapterDetail.getContent().replaceAll("\n", "<br>"));
@@ -68,23 +70,22 @@ public class NovelController {
      * @return 章节json数据
      */
     @RequestMapping(value = "/showChapterList", method = RequestMethod.GET)
-    public ModelAndView showChapterList(String url,String novelName) {
+    public ModelAndView showChapterList(String url, String novelName) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("/ChapterList");
-        modelAndView.getModel().put("novelName",novelName);
+        modelAndView.getModel().put("novelName", novelName);
         modelAndView.getModel().put("chapterList", ChapterSpiderFactory.getChapterSpider(url).getChapter(url));
         modelAndView.getModel().put("baseUrl", url);
         return modelAndView;
     }
 
 
-    @RequestMapping(value = "getAutoCompletion",method =RequestMethod.GET)
+    @RequestMapping(value = "getAutoCompletion", method = RequestMethod.GET)
     @ResponseBody
     public JSONResponse getAutoCompletion(@RequestParam("keyword") String keyword) {
-        if(keyword == null || keyword.equals("")) {
+        if (keyword == null || keyword.equals("")) {
             return JSONResponse.error("你都没有输入关键词，无法自动提示");
-        }
-        else {
+        } else {
             return JSONResponse.success(novelService.getAutoCompletion(keyword));
         }
     }

@@ -17,23 +17,65 @@
     <meta charset="UTF-8">
     <title>${novelName}</title>
     <style>
-        a{
+        a {
             text-decoration: none;
         }
-        table{
+
+        table {
             border: 1px solid darkcyan;
         }
-        #title{
+
+        #title {
             text-align: center;
 
         }
+
+        td {
+            padding: 10px;
+            border: 1px solid darkcyan;
+            text-align: center;
+        }
+
+        a:hover {
+            border-bottom: 1px solid ivory;
+        }
+
+        table {
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #backtop a {
+            /* back to top button */
+            position: fixed;
+            bottom: 0px; /* 小按钮到浏览器底边的距离 */
+            right: 50px; /* 小按钮到浏览器右边框的距离 */
+            color: #333; /* 小按钮中文字的颜色 */
+            z-index: 1000;
+            background: #cfcfcf; /* 小按钮底色 */
+            padding: 10px; /* 小按钮中文字到按钮边缘的距离 */
+            border-radius: 4px; /* 小按钮圆角的弯曲程度（半径）*/
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            font-weight: normal; /* 小按钮中文字的粗细 */
+            text-decoration: none !important;
+        }
+
+        #backtop a:hover {
+            /* 小按钮上有鼠标悬停时 */
+            background: #333; /* 小按钮的底色 */
+            color: #fff; /* 文字颜色 */
+        }
+
     </style>
 </head>
 <body>
 <div>
     <a href="index">返回首页</a>
+
 </div>
-<table >
+<div id="backtop"><a href="#">TOP</a></div>
+<table>
     <h2 id="title">${novelName}</h2>
 
     <c:forEach items="${chapterList}" var="chapter" varStatus="index">
@@ -58,6 +100,7 @@
 
 
 </table>
+
 
 </body>
 </html>
