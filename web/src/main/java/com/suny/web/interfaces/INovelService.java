@@ -12,6 +12,13 @@ import java.util.List;
 public interface INovelService {
 
     /**
+     *  输入关键词自动补全
+     * @param keyword  要搜索的关键词
+     * @return 自动提示的词语
+     */
+    public List<Novel> getAutoCompletion(String keyword);
+
+    /**
      *  通过关键字查询结果，然后返回内容
      * @param keyword  查询的关键字
      * @return

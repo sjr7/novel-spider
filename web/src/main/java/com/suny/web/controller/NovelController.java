@@ -78,6 +78,18 @@ public class NovelController {
     }
 
 
+    @RequestMapping(value = "getAutoCompletion",method =RequestMethod.GET)
+    @ResponseBody
+    public JSONResponse getAutoCompletion(@RequestParam("keyword") String keyword) {
+        if(keyword == null || keyword.equals("")) {
+            return JSONResponse.error("你都没有输入关键词，无法自动提示");
+        }
+        else {
+            return JSONResponse.success(novelService.getAutoCompletion(keyword));
+        }
+    }
+
+
     /**
      * 通过关键字跟平台id进行查询
      *

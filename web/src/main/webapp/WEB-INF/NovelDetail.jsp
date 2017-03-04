@@ -11,8 +11,10 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path;
 %>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
+    <meta charset="UTF-8">
     <title>${chapterDetail.title}</title>
     <style>
       .prev,.next{

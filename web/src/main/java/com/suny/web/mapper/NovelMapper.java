@@ -11,6 +11,8 @@ import java.util.Map;
 @Repository
 public interface NovelMapper {
 
+    List<Novel> getAutoCompletion(String keyword);
+
     List<Novel> getsNovelByKeyword2(Map<String,String> stringStringMap);
 
     List<Novel> getsNovelByKeyword(String keyword);

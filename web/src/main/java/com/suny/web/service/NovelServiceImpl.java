@@ -23,6 +23,17 @@ public class NovelServiceImpl implements INovelService {
 
 
     /**
+     *  自动提示
+     * @param keyword  要搜索的关键词
+     * @return
+     */
+    @Override
+    public List<Novel> getAutoCompletion(String keyword) {
+        keyword = "%" + keyword + "%";
+        return novelMapper.getAutoCompletion(keyword);
+    }
+
+    /**
      * 通过查询关键字得到小说列表
      *
      * @param keyword 查询的关键字

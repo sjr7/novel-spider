@@ -351,11 +351,20 @@
 
     <select id="getsNovelByKeyword2" resultMap="BaseResultMap" parameterType="java.util.Map">
         SELECT
-        <include refid="Base_Column_List" />
+        <include refid="Base_Column_List"/>
         from novel
         WHERE ( name LIKE #{keyword} OR author LIKE #{keyword} )
         AND
         ( platform_id = #{ platformId } )
+    </select>
+
+    <select id="getAutoCompletion" resultMap="BaseResultMap" parameterType="java.lang.String">
+        SELECT name
+        FROM novel
+        WHERE
+            name LIKE
+            #{keyword}
+        LIMIT 10
     </select>
 
 
