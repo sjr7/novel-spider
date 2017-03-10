@@ -165,7 +165,7 @@
     }
 
     function getAutoCompletion() {
-        console.log("开始自动补全");
+        console.log("开始自动补全，请求的关键字是"+document.getElementById("keyword").value);
         var xmlHttp = createxmlHttpRequest();
         xmlHttp.open("get", "${pageContext.request.contextPath}/getAutoCompletion?keyword=" +
         document.getElementById("keyword").value, true);
@@ -173,6 +173,7 @@
         xmlHttp.onreadystatechange = function () {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
                 var json = JSON.parse(xmlHttp.responseText);
+                console.log(json);
                 if (!json.status == false && json.status == true) {
                     for (var i = 0; i < json.data.length; i++) {
                         var option = document.createElement("option");

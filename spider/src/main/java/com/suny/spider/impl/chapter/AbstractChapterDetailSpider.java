@@ -8,7 +8,6 @@ import com.suny.spider.utils.NovelSpiderUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.io.*;
 import java.util.Map;
 
 /**
@@ -51,7 +50,7 @@ public abstract class AbstractChapterDetailSpider extends AbstractSpider impleme
             //对是否有上一页或者下一页的状态进行判断，有就设置，没有就不设置
             if (hasPrevPage) {
                 chapterDetail.setPrev(document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href"));
-                chapterDetail.setNextStatus(1);
+
             } else {
                 chapterDetail.setPrev(url);
             }
@@ -65,7 +64,7 @@ public abstract class AbstractChapterDetailSpider extends AbstractSpider impleme
 
             if (hasNextPage) {
                 chapterDetail.setNext(document.select(splits[0]).get(Integer.parseInt(splits[1])).absUrl("href"));
-                chapterDetail.setNextStatus(1);
+
             } else {
                 chapterDetail.setNext(url);
 

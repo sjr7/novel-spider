@@ -16,8 +16,6 @@ public interface NovelMapper {
 
     int insertSelective(Novel record);
 
-    public void batchInsert(List<Novel> novels);
-
     List<Novel> selectByExample(NovelExample example);
 
     Novel selectByPrimaryKey(Long id);

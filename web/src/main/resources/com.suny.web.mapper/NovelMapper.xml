@@ -358,7 +358,7 @@
         ( platform_id = #{ platformId } )
     </select>
 
-    <select id="getAutoCompletion" resultMap="BaseResultMap" parameterType="java.lang.String">
+    <select id="getAutoCompletion" resultMap="BaseResultMap" parameterType="string">
         SELECT name
         FROM novel
         WHERE

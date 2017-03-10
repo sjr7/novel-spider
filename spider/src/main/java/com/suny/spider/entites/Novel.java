@@ -122,41 +122,4 @@ public class Novel {
     public void setLastUpdateTime(Date lastUpdateTime) {
         this.lastUpdateTime = lastUpdateTime;
     }
-
-    public Novel() {
-    }
-
-
-    public Novel(Long id, String name, String author, String url, String type, String lastUpdateChapter, String lastUpdateChapterUrl, Integer status, String firstLetter, Integer platformId, Date addtime, Date lastUpdateTime) {
-        this.id = id;
-        this.name = name;
-        this.author = author;
-        this.url = url;
-        this.type = type;
-        this.lastUpdateChapter = lastUpdateChapter;
-        this.lastUpdateChapterUrl = lastUpdateChapterUrl;
-        this.status = status;
-        this.firstLetter = firstLetter;
-        this.platformId = platformId;
-        this.addtime = addtime;
-        this.lastUpdateTime = lastUpdateTime;
-    }
-
-    @Override
-    public String toString() {
-        return "Novel{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", author='" + author + '\'' +
-                ", url='" + url + '\'' +
-                ", type='" + type + '\'' +
-                ", lastUpdateChapter='" + lastUpdateChapter + '\'' +
-                ", lastUpdateChapterUrl='" + lastUpdateChapterUrl + '\'' +
-                ", status=" + status +
-                ", firstLetter='" + firstLetter + '\'' +
-                ", platformId=" + platformId +
-                ", addtime=" + addtime +
-                ", lastUpdateTime=" + lastUpdateTime +
-                '}';
-    }
 }

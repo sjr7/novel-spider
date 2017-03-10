@@ -9,13 +9,14 @@ import com.suny.spider.interfaces.IChapterSpider;
 import com.suny.spider.utils.NovelSpiderUtil;
 import com.suny.web.entitys.JSONResponse;
 import com.suny.web.interfaces.INovelService;
-import com.suny.web.mapper.NovelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -26,12 +27,14 @@ import java.util.List;
 @Controller
 public class NovelController {
 
-    @Resource
+    @Autowired
     private INovelService novelService;
+
 
     static {
         NovelSpiderUtil.setConfigPath("conf/Spider-Rule.xml");
     }
+
 
 
     /**
@@ -48,8 +51,6 @@ public class NovelController {
         ChapterDetail chapterDetail;
         try {
             chapterDetail = ChapterDetailSpiderFactory.getChapterDetailSpider(url).getChapterDetail(url);
-            modelAndView.getModel().put("PrevStatus", chapterDetail.getPrevStatus());
-            modelAndView.getModel().put("NextStatus", chapterDetail.getNextStatus());
             modelAndView.getModel().put("chapterDetail", chapterDetail);
             modelAndView.getModel().put("isSuccess", true);
             //chapterDetail.setContent(chapterDetail.getContent().replaceAll("\n", "<br>"));
@@ -63,7 +64,8 @@ public class NovelController {
 
     }
 
-    /**
+
+     /**
      * 请求小说的章节列表
      *
      * @param url 小说的url地址
@@ -80,6 +82,11 @@ public class NovelController {
     }
 
 
+    /**
+     * 自动补全提示词
+     * @param keyword  要查询的关键词
+     * @return
+     */
     @RequestMapping(value = "getAutoCompletion", method = RequestMethod.GET)
     @ResponseBody
     public JSONResponse getAutoCompletion(@RequestParam("keyword") String keyword) {
@@ -91,13 +98,15 @@ public class NovelController {
     }
 
 
-    /**
+
+     /**
      * 通过关键字跟平台id进行查询
      *
      * @param keyword    小说的关键字
      * @param platformId 小说网站对应的id
      * @return 关键字跟平台id联合查询的json数据
      */
+
     @RequestMapping(value = "/getNovelByKeywordAndPlatformId", method = RequestMethod.POST)
     @ResponseBody
     public JSONResponse getNovelByKeyWordAndPlatformId(@RequestParam("keyword") String keyword,
@@ -115,12 +124,14 @@ public class NovelController {
     }
 
 
-    /**
+
+     /**
      * 通过关键词搜索
      *
      * @param keyword 查询的小说关键词
      * @return 得到的小说列表json数据
      */
+
     @RequestMapping(value = "/getsNovelByKeyword", method = RequestMethod.POST)
     @ResponseBody
     public JSONResponse getsNovelByKeyword(@RequestParam("keyword") String keyword) {
@@ -128,12 +139,14 @@ public class NovelController {
         return JSONResponse.success(novelService.getsNovelByKeyword(keyword));
     }
 
+
     /**
      * 请求一本小说
      *
      * @param url 请求的小说的地址
      * @return 小说的json数据
      */
+
     @RequestMapping(value = "/chapters", method = RequestMethod.GET)
     @ResponseBody
     public JSONResponse getChapter(String url) {
@@ -141,6 +154,8 @@ public class NovelController {
         List<Chapter> chapterList = chapterSpider.getChapter(url);
         return JSONResponse.success(chapterList.get(1));
     }
+
+
 
 
     /**
@@ -158,13 +173,19 @@ public class NovelController {
     }
 
 
+
     /**
      * 小说搜索的主页面
      *
      * @return 搜索页面
      */
-    @RequestMapping(value = "/index")
+    @RequestMapping(value = "index")
     public String index() {
         return "/index";
     }
 }
+
+
+
+
+
