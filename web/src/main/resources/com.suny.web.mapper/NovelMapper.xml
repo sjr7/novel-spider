@@ -343,7 +343,7 @@
         SELECT
         <include refid="Base_Column_List"/>
         from novel
-        where name like #{ keyword}
+        where name like #{keyword}
         or
         author LIKE #{keyword}
     </select>
@@ -355,7 +355,7 @@
         from novel
         WHERE ( name LIKE #{keyword} OR author LIKE #{keyword} )
         AND
-        ( platform_id = #{ platformId } )
+        ( platform_id = #{platformId} )
     </select>
 
     <select id="getAutoCompletion" resultMap="BaseResultMap" parameterType="string">

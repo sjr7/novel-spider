@@ -24,7 +24,6 @@
         <processorPath useClasspath="true" />
         <module name="spider" />
         <module name="storage" />
-        <module name="web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
