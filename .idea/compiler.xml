@@ -27,7 +27,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="spider" target="" />
+      <module name="novel-spider" target="1.8" />
+      <module name="spider" target="1.8" />
+      <module name="storage" target="1.8" />
+      <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

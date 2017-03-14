@@ -76,7 +76,7 @@
         </where>
     </sql>
 
-    <!--返回的集合-->
+
     <sql id="Base_Column_List">
         id, name, author, url, type, last_update_chapter, last_update_chapter_url, status,
         first_letter, platform_id, addtime, last_update_time
