@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-# Created by .ignore support plugin (hsz.mobi)
-### Java template
-*.class
-
-# BlueJ files
-*.ctxt
-
-=======
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
 # Package Files #
 *.jar
 *.war
@@ -21,10 +9,17 @@ hs_err_pid*
 
 out/
 spider/spider.iml
-novel-spider.iml
 spider/target/
 storage/target/
 web/target/
 /target/
 #pom.xml
 #spider/
+/.idea/
+novel-spider-core/target/classes/com/
+novel-spider-core/target/generated-sources/
+novel-spider-core/target/generated-test-sources/
+novel-spider-core/target/maven-archiver/
+novel-spider-core/target/maven-status/
+novel-spider-core/target/test-classes/
+novel-spider-web/target/
