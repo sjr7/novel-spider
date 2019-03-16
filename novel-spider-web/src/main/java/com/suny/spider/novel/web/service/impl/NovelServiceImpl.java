@@ -1,6 +1,6 @@
 package com.suny.spider.novel.web.service.impl;
 
-import com.suny.spider.novel.core.entites.Novel;
+import com.suny.spider.novel.core.model.Novel;
 import com.suny.spider.novel.storage.mapper.NovelMapper;
 import com.suny.spider.novel.web.service.INovelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +11,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Comments:   小说抓取逻辑类
+ * 小说抓取逻辑类
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/28 16:21
  */
 @Service
@@ -57,7 +57,7 @@ public class NovelServiceImpl implements INovelService {
      */
     @Override
     public List<Novel> getsNovelByKeyword(String keyword, int platformId) {
-        Map<String, String> stringStringMap = new HashMap<>();
+        Map<String, String> stringStringMap = new HashMap<>(2);
         stringStringMap.put("keyword", "%" + keyword + "%");
         stringStringMap.put("platformId", platformId + "");
         return novelMapper.getsNovelByKeyword2(stringStringMap);

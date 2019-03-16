@@ -1,14 +1,14 @@
 package com.suny.spider.novel.core.impl.download;
 
-import com.suny.spider.novel.core.Factory.ChapterDetailSpiderFactory;
-import com.suny.spider.novel.core.Factory.ChapterSpiderFactory;
-import com.suny.spider.novel.core.configuration.Configuration;
-import com.suny.spider.novel.core.entites.Chapter;
-import com.suny.spider.novel.core.entites.ChapterDetail;
+import com.suny.spider.novel.core.config.Configuration;
 import com.suny.spider.novel.core.enums.NovelSiteEnum;
+import com.suny.spider.novel.core.factory.ChapterDetailSpiderFactory;
+import com.suny.spider.novel.core.factory.ChapterSpiderFactory;
 import com.suny.spider.novel.core.interfaces.IChapterDetailSpider;
 import com.suny.spider.novel.core.interfaces.IChapterSpider;
 import com.suny.spider.novel.core.interfaces.INovelDownload;
+import com.suny.spider.novel.core.model.Chapter;
+import com.suny.spider.novel.core.model.ChapterDetail;
 import com.suny.spider.novel.core.utils.NovelSpiderUtil;
 
 import java.io.File;
@@ -19,7 +19,8 @@ import java.util.concurrent.*;
 
 /**
  * 多线程下载小说
- * 孙建荣
+ *
+ * @author sunjianrong
  * 2017/02/21 22:03
  */
 public class NovelDownload implements INovelDownload {
@@ -76,13 +77,13 @@ class DownloadCallable implements Callable<String> {
     }
 
     @Override
-    public String call() throws Exception {
+    public String call() {
         try (
                 PrintWriter out = new PrintWriter(new File(path));
         ) {
             for (Chapter chapter : chapters) {
                 IChapterDetailSpider spider = ChapterDetailSpiderFactory.getChapterDetailSpider(chapter.getUrl());
-                ChapterDetail detail = null;
+                ChapterDetail detail;
                 for (int i = 0; i < tryTimes; i++) {
                     try {
                         detail = spider.getChapterDetail(chapter.getUrl());

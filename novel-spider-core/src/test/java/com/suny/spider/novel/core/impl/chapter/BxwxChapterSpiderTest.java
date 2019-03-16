@@ -1,6 +1,6 @@
 package com.suny.spider.novel.core.impl.chapter;
 
-import com.suny.spider.novel.core.entites.Chapter;
+import com.suny.spider.novel.core.model.Chapter;
 import org.junit.Test;
 
 import java.util.ArrayList;

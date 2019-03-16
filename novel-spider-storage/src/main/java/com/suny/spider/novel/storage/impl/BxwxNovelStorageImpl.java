@@ -1,9 +1,9 @@
 package com.suny.spider.novel.storage.impl;
 
 /**
- * Comments:  笔下文学的持久化储存的实现类
+ * 笔下文学的持久化储存的实现类
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/26 16:17
  */
 public class BxwxNovelStorageImpl extends AbstractNovelStorage {

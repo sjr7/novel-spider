@@ -1,4 +1,4 @@
-package com.suny.spider.novel.core.Factory;
+package com.suny.spider.novel.core.factory;
 
 import com.suny.spider.novel.core.enums.NovelSiteEnum;
 import com.suny.spider.novel.core.impl.chapter.BxwxChapterSpider;
@@ -6,9 +6,9 @@ import com.suny.spider.novel.core.impl.chapter.DefaultChapterSpider;
 import com.suny.spider.novel.core.interfaces.IChapterSpider;
 
 /**
- * Comments:   章节爬虫工厂代理类
+ * 章节爬虫工厂代理类
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/21 22:05
  */
 public class ChapterSpiderFactory {
@@ -32,6 +32,7 @@ public class ChapterSpiderFactory {
             case DingDianXiaoShuo:
             case BiQuGe:
             case KanShuZhong:
+            default:
                 chapterSpider = new DefaultChapterSpider();
                 break;
 

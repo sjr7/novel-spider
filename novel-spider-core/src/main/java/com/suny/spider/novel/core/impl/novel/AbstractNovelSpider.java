@@ -1,9 +1,9 @@
 package com.suny.spider.novel.core.impl.novel;
 
-import com.suny.spider.novel.core.entites.Novel;
 import com.suny.spider.novel.core.enums.NovelSiteEnum;
 import com.suny.spider.novel.core.impl.AbstractSpider;
 import com.suny.spider.novel.core.interfaces.INovelSpider;
+import com.suny.spider.novel.core.model.Novel;
 import com.suny.spider.novel.core.utils.NovelSpiderUtil;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -15,12 +15,21 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Comments:   抽象的小说列表抓取，应经实现了解析tr元素的方法
+ * 抽象的小说列表抓取，应经实现了解析tr元素的方法
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/25 10:53
  */
 public abstract class AbstractNovelSpider extends AbstractSpider implements INovelSpider {
+
+    /**
+     * 下一页的标签元素
+     */
+    protected Element nextPageElement;
+    /**
+     * 下一页值
+     */
+    protected String nextPage;
 
     @Override
     public boolean hasNext() {
@@ -38,16 +47,6 @@ public abstract class AbstractNovelSpider extends AbstractSpider implements INov
 
         return new NovelIterator(maxTryTimes);
     }
-
-    /**
-     * 下一页的标签元素
-     */
-    protected Element nextPageElement;
-
-    /**
-     * 下一页值
-     */
-    protected String nextPage;
 
     /**
      * 默认的抓取方法，最多会尝试 {@link INovelSpider#MAX_TRY_TIMES }

@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/novel?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/novel
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -14,7 +14,7 @@ spring:
       suffix: .jsp
 
 mybatis:
-  type-aliases-package: com.suny.spider.novel.web.entitys
+  type-aliases-package: com.suny.spider.novel.web.model
   configuration:
     map-underscore-to-camel-case: true
     default-fetch-size: 100

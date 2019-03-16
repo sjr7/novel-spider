@@ -9,9 +9,9 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
 
 /**
- * Comments:        抓取页面抽象类
+ * 抓取页面抽象类
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/20 20:07
  */
 public abstract class AbstractSpider {
@@ -30,10 +30,9 @@ public abstract class AbstractSpider {
              CloseableHttpResponse httpResponse = closeableHttpClient.execute(new NovelSpiderHttpGet(url))
         ) {
             //返回抓取的结果
-            String result = EntityUtils.toString(httpResponse.getEntity(),
-                    NovelSpiderUtil.getContext(NovelSiteEnum.getEnumByUrl(url)).get("charset"));
             //传入解析的编码d
-            return result;
+            return EntityUtils.toString(httpResponse.getEntity(),
+                    NovelSpiderUtil.getContext(NovelSiteEnum.getEnumByUrl(url)).get("charset"));
         } catch (Exception e) {
             throw new RuntimeException();
         }

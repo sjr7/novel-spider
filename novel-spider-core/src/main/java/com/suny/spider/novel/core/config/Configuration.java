@@ -1,25 +1,34 @@
-package com.suny.spider.novel.core.configuration;
+package com.suny.spider.novel.core.config;
+
+import lombok.*;
 
 import java.io.Serializable;
 
 /**
- * Comments:   程序下载小说的配置文件
+ * 程序下载小说的配置文件
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/21 21:51
  */
+@AllArgsConstructor
+@Getter
+@Setter
+@EqualsAndHashCode
+@ToString
 public class Configuration implements Serializable {
+
+    private static final long serialVersionUID = 2729255133861275288L;
 
     /**
      * 下载每一章节的失败后最大尝试的次数
      */
-    public static final int DEFAULT_TRY_TIMES = 3;
+    private static final int DEFAULT_TRY_TIMES = 3;
 
 
     /**
      * 每个线程默认下载的最大章节数
      */
-    public static final int DEFAULT_SIZE = 100;
+    private static final int DEFAULT_SIZE = 100;
 
     /**
      * 下载后文件的保存位置
@@ -44,27 +53,4 @@ public class Configuration implements Serializable {
 
     }
 
-    public String getPath() {
-        return path;
-    }
-
-    public void setPath(String path) {
-        this.path = path;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
-    }
-
-    public int getTryTimes() {
-        return tryTimes;
-    }
-
-    public void setTryTimes(int tryTimes) {
-        this.tryTimes = tryTimes;
-    }
 }

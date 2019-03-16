@@ -1,11 +1,11 @@
 package com.suny.spider.novel.core.interfaces;
 
-import com.suny.spider.novel.core.configuration.Configuration;
+import com.suny.spider.novel.core.config.Configuration;
 
 /**
- * Comments:    下载小说的接口
+ * 下载小说的接口
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/21 21:49
  */
 public interface INovelDownload {
@@ -15,7 +15,7 @@ public interface INovelDownload {
      *
      * @param url           下载小说的地址
      * @param configuration 下载小说的配置文件
-     * @return
+     * @return 下载好的小说地址
      */
-    public String download(String url, Configuration configuration);
+    String download(String url, Configuration configuration);
 }

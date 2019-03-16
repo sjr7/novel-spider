@@ -1,13 +1,13 @@
-package com.suny.spider.novel.core.Factory;
+package com.suny.spider.novel.core.factory;
 
 import com.suny.spider.novel.core.enums.NovelSiteEnum;
 import com.suny.spider.novel.core.impl.chapter.DefaultChapterDetailSpider;
 import com.suny.spider.novel.core.interfaces.IChapterDetailSpider;
 
 /**
- * Comments:    章节内容爬虫的工厂代理类
+ * 章节内容爬虫的工厂代理类
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/21 22:24
  */
 public final class ChapterDetailSpiderFactory {
@@ -21,13 +21,14 @@ public final class ChapterDetailSpiderFactory {
      * @return
      */
     public static IChapterDetailSpider getChapterDetailSpider(String url) {
-        IChapterDetailSpider spider = null;
+        IChapterDetailSpider spider;
         NovelSiteEnum novelSiteEnum = NovelSiteEnum.getEnumByUrl(url);
         switch (novelSiteEnum) {
             case DingDianXiaoShuo:
             case BiQuGe:
             case KanShuZhong:
             case Bxwx:
+            default:
                 spider = new DefaultChapterDetailSpider();
                 break;
         }

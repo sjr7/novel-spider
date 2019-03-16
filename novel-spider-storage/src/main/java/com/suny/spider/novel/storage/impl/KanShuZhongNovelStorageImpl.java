@@ -1,13 +1,13 @@
 package com.suny.spider.novel.storage.impl;
 
 /**
- * Comments:  看书中小说持久化类
+ * 看书中小说持久化类
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/26 16:27
  */
-public class KanShuZhongNovelStorageImpl extends AbstractNovelStorage {
-    public KanShuZhongNovelStorageImpl() {
+class KanShuZhongNovelStorageImpl extends AbstractNovelStorage {
+    KanShuZhongNovelStorageImpl() {
         tasks.put("A", "http://www.kanshuzhong.com/map/A/1/");
         tasks.put("B", "http://www.kanshuzhong.com/map/B/1/");
         tasks.put("C", "http://www.kanshuzhong.com/map/C/1/");

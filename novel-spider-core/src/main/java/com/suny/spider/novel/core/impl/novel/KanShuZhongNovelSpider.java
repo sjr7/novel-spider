@@ -1,7 +1,7 @@
 package com.suny.spider.novel.core.impl.novel;
 
-import com.suny.spider.novel.core.entites.Novel;
 import com.suny.spider.novel.core.enums.NovelSiteEnum;
+import com.suny.spider.novel.core.model.Novel;
 import com.suny.spider.novel.core.utils.NovelSpiderUtil;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Comments:  看书中小说网站的爬取
+ * 看书中小说网站的爬取
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/25 13:01
  */
 public class KanShuZhongNovelSpider extends AbstractNovelSpider {

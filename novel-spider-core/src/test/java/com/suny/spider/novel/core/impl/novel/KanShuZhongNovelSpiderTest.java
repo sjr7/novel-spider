@@ -1,8 +1,8 @@
 package com.suny.spider.novel.core.impl.novel;
 
-import com.suny.spider.novel.core.Factory.NovelSpiderFactory;
-import com.suny.spider.novel.core.entites.Novel;
+import com.suny.spider.novel.core.factory.NovelSpiderFactory;
 import com.suny.spider.novel.core.interfaces.INovelSpider;
+import com.suny.spider.novel.core.model.Novel;
 import junit.framework.TestCase;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.suny.spider.novel.core.impl;
 
-import com.suny.spider.novel.core.configuration.Configuration;
+import com.suny.spider.novel.core.config.Configuration;
 import com.suny.spider.novel.core.enums.NovelSiteEnum;
 import com.suny.spider.novel.core.impl.chapter.DefaultChapterDetailSpider;
 import com.suny.spider.novel.core.impl.download.NovelDownload;

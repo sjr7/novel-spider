@@ -1,47 +1,49 @@
 package com.suny.spider.novel.core.enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 /**
- * Comments:    单独创建一个枚举类，限定已经被支持的小说网站
+ * 单独创建一个枚举类，限定已经被支持的小说网站
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/19 20:25
  */
+@AllArgsConstructor
+@Getter
 public enum NovelSiteEnum {
-    DingDianXiaoShuo(1, "23wx.com"),           //顶点小说
-    BiQuGe(2, "biquge.tw"),                      //笔趣阁
-    KanShuZhong(3, "kanshuzhong.com"),          //看书中
-    Bxwx(4, "bxwx9.org");                       //笔下文学
+    /**
+     * 顶点小说
+     */
+    DingDianXiaoShuo(1, "23wx.com"),
+    /**
+     * 笔趣阁
+     */
+    BiQuGe(2, "biquge.tw"),
+    /**
+     * 看书中
+     */
+    KanShuZhong(3, "kanshuzhong.com"),
+    /**
+     * 笔下文学
+     */
+    Bxwx(4, "bxwx9.org");
 
-    private int id;             //  枚举对象对应的id
-    private String url;         // 枚举对象对应的url地址
+    /**
+     * 枚举对象对应的id
+     */
+    private int id;
+    /**
+     * 枚举对象对应的url地址
+     */
+    private String url;
 
-    private NovelSiteEnum(int id, String url) {
-        this.id = id;
-        this.url = url;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getUrl() {
-        return url;
-    }
-
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
 
     /**
      * 通过枚举id返回url地址
      *
      * @param id 枚举id
-     * @return
+     * @return url 地址
      */
     public static NovelSiteEnum getEnumById(int id) {
         switch (id) {
@@ -60,7 +62,7 @@ public enum NovelSiteEnum {
      * 通过url返回一个枚举对象
      *
      * @param url 支持的小说网站url地址
-     * @return
+     * @return 枚举
      */
     public static NovelSiteEnum getEnumByUrl(String url) {
         for (NovelSiteEnum novelSiteEnum : values()) {

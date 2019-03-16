@@ -1,13 +1,11 @@
 package com.suny.spider.novel.web.service;
 
-import com.suny.spider.novel.core.entites.Novel;
+import com.suny.spider.novel.core.model.Novel;
 
 import java.util.List;
 
 /**
- * Comments:
- *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/28 16:16
  */
 public interface INovelService {
@@ -18,22 +16,22 @@ public interface INovelService {
      * @param keyword 要搜索的关键词
      * @return 自动提示的词语
      */
-    public List<Novel> getAutoCompletion(String keyword);
+    List<Novel> getAutoCompletion(String keyword);
 
     /**
      * 通过关键字查询结果，然后返回内容
      *
      * @param keyword 查询的关键字
-     * @return
+     * @return 关键词结果
      */
-    public List<Novel> getsNovelByKeyword(String keyword);
+    List<Novel> getsNovelByKeyword(String keyword);
 
     /**
      * 查找小说在指定的平台下
      *
      * @param keyword    指定的关键字
      * @param platformId 平台id
-     * @return
+     * @return 指定平台下的小说
      */
-    public List<Novel> getsNovelByKeyword(String keyword, int platformId);
+    List<Novel> getsNovelByKeyword(String keyword, int platformId);
 }

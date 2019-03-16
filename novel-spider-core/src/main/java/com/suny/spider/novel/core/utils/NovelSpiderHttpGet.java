@@ -6,9 +6,9 @@ import org.apache.http.client.methods.HttpGet;
 import java.net.URI;
 
 /**
- * Comments:  自定义实现的httpGet类，用于自定义连接网络时的配置参数
+ * 自定义实现的httpGet类，用于自定义连接网络时的配置参数
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/23 13:10
  */
 public class NovelSpiderHttpGet extends HttpGet {
@@ -31,10 +31,10 @@ public class NovelSpiderHttpGet extends HttpGet {
     private void setDefaultConfig() {
         this.setConfig(RequestConfig.custom()
                 .setSocketTimeout(2_000)
-                .setConnectTimeout(10_000)    // 是设置连接服务器的超时时间
-                .setConnectionRequestTimeout(10_000)   //  是设置从服务器读取数据的超时时间
+                .setConnectTimeout(10_000)
+                .setConnectionRequestTimeout(10_000)
                 .build());
-        this.setHeader("User-Agent", "NovelSpider");   //  设置请求头
+        this.setHeader("User-Agent", "NovelSpider");
     }
 
 

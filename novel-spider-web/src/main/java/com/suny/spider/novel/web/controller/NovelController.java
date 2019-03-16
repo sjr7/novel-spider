@@ -1,13 +1,13 @@
 package com.suny.spider.novel.web.controller;
 
-import com.suny.spider.novel.core.Factory.ChapterDetailSpiderFactory;
-import com.suny.spider.novel.core.Factory.ChapterSpiderFactory;
-import com.suny.spider.novel.core.entites.Chapter;
-import com.suny.spider.novel.core.entites.ChapterDetail;
+import com.suny.spider.novel.core.factory.ChapterDetailSpiderFactory;
+import com.suny.spider.novel.core.factory.ChapterSpiderFactory;
 import com.suny.spider.novel.core.interfaces.IChapterDetailSpider;
 import com.suny.spider.novel.core.interfaces.IChapterSpider;
+import com.suny.spider.novel.core.model.Chapter;
+import com.suny.spider.novel.core.model.ChapterDetail;
 import com.suny.spider.novel.core.utils.NovelSpiderUtil;
-import com.suny.spider.novel.web.entitys.JSONResponse;
+import com.suny.spider.novel.web.model.ResponseMsg;
 import com.suny.spider.novel.web.service.INovelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,20 +20,23 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 /**
- * Comments:  小说web站点
+ * 小说web站点控制层入口
  *
- * @author 孙建荣
+ * @author sunjianrong
  * @date 2017/02/27 20:09
  */
 @Controller
 public class NovelController {
 
-    @Autowired
-    private INovelService novelService;
-
-
     static {
         NovelSpiderUtil.setConfigPath("conf/Spider-Rule.xml");
+    }
+
+    private final INovelService novelService;
+
+    @Autowired
+    public NovelController(INovelService novelService) {
+        this.novelService = novelService;
     }
 
 
@@ -53,7 +56,6 @@ public class NovelController {
             chapterDetail = ChapterDetailSpiderFactory.getChapterDetailSpider(url).getChapterDetail(url);
             modelAndView.getModel().put("chapterDetail", chapterDetail);
             modelAndView.getModel().put("isSuccess", true);
-            //chapterDetail.setContent(chapterDetail.getContent().replaceAll("\n", "<br>"));
         } catch (Exception e) {
             e.printStackTrace();
             modelAndView.getModel().put("isSuccess", false);
@@ -86,15 +88,15 @@ public class NovelController {
      * 自动补全提示词
      *
      * @param keyword 要查询的关键词
-     * @return
+     * @return 自动补全的词语
      */
     @RequestMapping(value = "getAutoCompletion", method = RequestMethod.GET)
     @ResponseBody
-    public JSONResponse getAutoCompletion(@RequestParam("keyword") String keyword) {
-        if (keyword == null || keyword.equals("")) {
-            return JSONResponse.error("你都没有输入关键词，无法自动提示");
+    public ResponseMsg getAutoCompletion(@RequestParam("keyword") String keyword) {
+        if (keyword == null || "".equals(keyword)) {
+            return ResponseMsg.error("你都没有输入关键词，无法自动提示");
         } else {
-            return JSONResponse.success(novelService.getAutoCompletion(keyword));
+            return ResponseMsg.success(novelService.getAutoCompletion(keyword));
         }
     }
 
@@ -109,15 +111,15 @@ public class NovelController {
 
     @RequestMapping(value = "/getNovelByKeywordAndPlatformId", method = RequestMethod.POST)
     @ResponseBody
-    public JSONResponse getNovelByKeyWordAndPlatformId(@RequestParam("keyword") String keyword,
-                                                       @RequestParam("platformId") Integer platformId) {
+    public ResponseMsg getNovelByKeyWordAndPlatformId(@RequestParam("keyword") String keyword,
+                                                      @RequestParam("platformId") Integer platformId) {
 
-        if (keyword == null || keyword.equals("")) {
-            return JSONResponse.error("你没有关键词");
-        } else if (platformId == null || platformId.equals("")) {
-            return JSONResponse.success(novelService.getsNovelByKeyword(keyword));
+        if (keyword == null || "".equals(keyword)) {
+            return ResponseMsg.error("你没有关键词");
+        } else if (platformId == null) {
+            return ResponseMsg.success(novelService.getsNovelByKeyword(keyword));
         } else {
-            return JSONResponse.success(novelService.getsNovelByKeyword(keyword, platformId));
+            return ResponseMsg.success(novelService.getsNovelByKeyword(keyword, platformId));
         }
 
 
@@ -133,9 +135,9 @@ public class NovelController {
 
     @RequestMapping(value = "/getsNovelByKeyword", method = RequestMethod.POST)
     @ResponseBody
-    public JSONResponse getsNovelByKeyword(@RequestParam("keyword") String keyword) {
+    public ResponseMsg getsNovelByKeyword(@RequestParam("keyword") String keyword) {
         System.out.println(keyword);
-        return JSONResponse.success(novelService.getsNovelByKeyword(keyword));
+        return ResponseMsg.success(novelService.getsNovelByKeyword(keyword));
     }
 
 
@@ -148,10 +150,10 @@ public class NovelController {
 
     @RequestMapping(value = "/chapters", method = RequestMethod.GET)
     @ResponseBody
-    public JSONResponse getChapter(String url) {
+    public ResponseMsg getChapter(String url) {
         IChapterSpider chapterSpider = ChapterSpiderFactory.getChapterSpider(url);
         List<Chapter> chapterList = chapterSpider.getChapter(url);
-        return JSONResponse.success(chapterList.get(1));
+        return ResponseMsg.success(chapterList.get(1));
     }
 
 
@@ -163,10 +165,10 @@ public class NovelController {
      */
     @RequestMapping(value = "/chapterDetail", method = RequestMethod.GET)
     @ResponseBody
-    public JSONResponse getChapterDetail(String url) {
+    public ResponseMsg getChapterDetail(String url) {
         IChapterDetailSpider chapterDetailSpider = ChapterDetailSpiderFactory.getChapterDetailSpider(url);
         ChapterDetail chapterDetail = chapterDetailSpider.getChapterDetail(url);
-        return JSONResponse.success(chapterDetail);
+        return ResponseMsg.success(chapterDetail);
     }
 
 
@@ -175,7 +177,7 @@ public class NovelController {
      *
      * @return 搜索页面
      */
-    @RequestMapping(value = "index")
+    @RequestMapping(value = {"index", "/", "index.html"})
     public String index() {
         return "/index";
     }
