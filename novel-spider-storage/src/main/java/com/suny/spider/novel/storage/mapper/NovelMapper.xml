@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suny.spider.novel.storage.mapper.NovelMapper">
+    <resultMap id="BaseResultMap" type="com.suny.spider.novel.core.entites.Novel">
+        <id column="id" property="id" jdbcType="BIGINT"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="author" property="author" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="last_update_chapter" property="lastUpdateChapter" jdbcType="VARCHAR"/>
+        <result column="last_update_chapter_url" property="lastUpdateChapterUrl" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="INTEGER"/>
+        <result column="first_letter" property="firstLetter" jdbcType="CHAR"/>
+        <result column="platform_id" property="platformId" jdbcType="INTEGER"/>
+        <result column="addtime" property="addtime" jdbcType="DATE"/>
+        <result column="last_update_time" property="lastUpdateTime" jdbcType="DATE"/>
+    </resultMap>
+    <sql id="Example_Where_Clause">
+        <where>
+            <foreach collection="oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+    <sql id="Update_By_Example_Where_Clause">
+        <where>
+            <foreach collection="example.oredCriteria" item="criteria" separator="or">
+                <if test="criteria.valid">
+                    <trim prefix="(" suffix=")" prefixOverrides="and">
+                        <foreach collection="criteria.criteria" item="criterion">
+                            <choose>
+                                <when test="criterion.noValue">
+                                    and ${criterion.condition}
+                                </when>
+                                <when test="criterion.singleValue">
+                                    and ${criterion.condition} #{criterion.value}
+                                </when>
+                                <when test="criterion.betweenValue">
+                                    and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                                </when>
+                                <when test="criterion.listValue">
+                                    and ${criterion.condition}
+                                    <foreach collection="criterion.value" item="listItem" open="(" close=")"
+                                             separator=",">
+                                        #{listItem}
+                                    </foreach>
+                                </when>
+                            </choose>
+                        </foreach>
+                    </trim>
+                </if>
+            </foreach>
+        </where>
+    </sql>
+
+
+    <sql id="Base_Column_List">
+        id, name, author, url, type, last_update_chapter, last_update_chapter_url, status,
+        first_letter, platform_id, addtime, last_update_time
+    </sql>
+
+
+    <select id="selectByExample" resultMap="BaseResultMap"
+            parameterType="com.suny.spider.novel.core.entites.NovelExample">
+        select
+        <if test="distinct">
+            distinct
+        </if>
+        <include refid="Base_Column_List"/>
+        from novel
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+        <if test="orderByClause != null">
+            order by ${orderByClause}
+        </if>
+    </select>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from novel
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+        DELETE
+        FROM novel
+        WHERE id = #{id,jdbcType=BIGINT}
+    </delete>
+    <delete id="deleteByExample" parameterType="com.suny.spider.novel.core.entites.NovelExample">
+        delete from novel
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </delete>
+    <insert id="batchInsert" parameterType="java.util.List">
+        INSERT INTO novel
+        (id,name,author,url,type,last_update_chapter,last_update_chapter_url,
+        last_update_time,status,first_letter,platform_id)
+        VALUES
+        <foreach collection="list" index="index" item="item" separator=",">
+            (
+            #{item.id},#{item.name},#{item.author},#{item.url},#{item.type},#{item.lastUpdateChapter},#{item.lastUpdateChapterUrl},
+            #{item.lastUpdateTime},#{item.status},#{item.firstLetter},#{item.platformId}
+            )
+        </foreach>
+    </insert>
+    <insert id="insert" parameterType="com.suny.spider.novel.core.entites.Novel">
+        INSERT INTO novel (id, name, author,
+                           url, type, last_update_chapter,
+                           last_update_chapter_url, status, first_letter,
+                           platform_id, addtime, last_update_time)
+        VALUES (#{id,jdbcType=BIGINT}, #{name,jdbcType=VARCHAR}, #{author,jdbcType=VARCHAR},
+                #{url,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{lastUpdateChapter,jdbcType=VARCHAR},
+                #{lastUpdateChapterUrl,jdbcType=VARCHAR}, #{status,jdbcType=INTEGER}, #{firstLetter,jdbcType=CHAR},
+                #{platformId,jdbcType=INTEGER}, #{addtime,jdbcType=DATE}, #{lastUpdateTime,jdbcType=DATE})
+    </insert>
+    <insert id="insertSelective" parameterType="com.suny.spider.novel.core.entites.Novel">
+        insert into novel
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="author != null">
+                author,
+            </if>
+            <if test="url != null">
+                url,
+            </if>
+            <if test="type != null">
+                type,
+            </if>
+            <if test="lastUpdateChapter != null">
+                last_update_chapter,
+            </if>
+            <if test="lastUpdateChapterUrl != null">
+                last_update_chapter_url,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="firstLetter != null">
+                first_letter,
+            </if>
+            <if test="platformId != null">
+                platform_id,
+            </if>
+            <if test="addtime != null">
+                addtime,
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdateChapter != null">
+                #{lastUpdateChapter,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdateChapterUrl != null">
+                #{lastUpdateChapterUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="firstLetter != null">
+                #{firstLetter,jdbcType=CHAR},
+            </if>
+            <if test="platformId != null">
+                #{platformId,jdbcType=INTEGER},
+            </if>
+            <if test="addtime != null">
+                #{addtime,jdbcType=DATE},
+            </if>
+            <if test="lastUpdateTime != null">
+                #{lastUpdateTime,jdbcType=DATE},
+            </if>
+        </trim>
+    </insert>
+    <select id="countByExample" parameterType="com.suny.spider.novel.core.entites.NovelExample"
+            resultType="java.lang.Integer">
+        select count(*) from novel
+        <if test="_parameter != null">
+            <include refid="Example_Where_Clause"/>
+        </if>
+    </select>
+    <update id="updateByExampleSelective" parameterType="map">
+        update novel
+        <set>
+            <if test="record.id != null">
+                id = #{record.id,jdbcType=BIGINT},
+            </if>
+            <if test="record.name != null">
+                name = #{record.name,jdbcType=VARCHAR},
+            </if>
+            <if test="record.author != null">
+                author = #{record.author,jdbcType=VARCHAR},
+            </if>
+            <if test="record.url != null">
+                url = #{record.url,jdbcType=VARCHAR},
+            </if>
+            <if test="record.type != null">
+                type = #{record.type,jdbcType=VARCHAR},
+            </if>
+            <if test="record.lastUpdateChapter != null">
+                last_update_chapter = #{record.lastUpdateChapter,jdbcType=VARCHAR},
+            </if>
+            <if test="record.lastUpdateChapterUrl != null">
+                last_update_chapter_url = #{record.lastUpdateChapterUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="record.status != null">
+                status = #{record.status,jdbcType=INTEGER},
+            </if>
+            <if test="record.firstLetter != null">
+                first_letter = #{record.firstLetter,jdbcType=CHAR},
+            </if>
+            <if test="record.platformId != null">
+                platform_id = #{record.platformId,jdbcType=INTEGER},
+            </if>
+            <if test="record.addtime != null">
+                addtime = #{record.addtime,jdbcType=DATE},
+            </if>
+            <if test="record.lastUpdateTime != null">
+                last_update_time = #{record.lastUpdateTime,jdbcType=DATE},
+            </if>
+        </set>
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByExample" parameterType="map">
+        update novel
+        set id = #{record.id,jdbcType=BIGINT},
+        name = #{record.name,jdbcType=VARCHAR},
+        author = #{record.author,jdbcType=VARCHAR},
+        url = #{record.url,jdbcType=VARCHAR},
+        type = #{record.type,jdbcType=VARCHAR},
+        last_update_chapter = #{record.lastUpdateChapter,jdbcType=VARCHAR},
+        last_update_chapter_url = #{record.lastUpdateChapterUrl,jdbcType=VARCHAR},
+        status = #{record.status,jdbcType=INTEGER},
+        first_letter = #{record.firstLetter,jdbcType=CHAR},
+        platform_id = #{record.platformId,jdbcType=INTEGER},
+        addtime = #{record.addtime,jdbcType=DATE},
+        last_update_time = #{record.lastUpdateTime,jdbcType=DATE}
+        <if test="_parameter != null">
+            <include refid="Update_By_Example_Where_Clause"/>
+        </if>
+    </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.suny.spider.novel.core.entites.Novel">
+        update novel
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="author != null">
+                author = #{author,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="type != null">
+                type = #{type,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdateChapter != null">
+                last_update_chapter = #{lastUpdateChapter,jdbcType=VARCHAR},
+            </if>
+            <if test="lastUpdateChapterUrl != null">
+                last_update_chapter_url = #{lastUpdateChapterUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="firstLetter != null">
+                first_letter = #{firstLetter,jdbcType=CHAR},
+            </if>
+            <if test="platformId != null">
+                platform_id = #{platformId,jdbcType=INTEGER},
+            </if>
+            <if test="addtime != null">
+                addtime = #{addtime,jdbcType=DATE},
+            </if>
+            <if test="lastUpdateTime != null">
+                last_update_time = #{lastUpdateTime,jdbcType=DATE},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.suny.spider.novel.core.entites.Novel">
+        UPDATE novel
+        SET name                    = #{name,jdbcType=VARCHAR},
+            author                  = #{author,jdbcType=VARCHAR},
+            url                     = #{url,jdbcType=VARCHAR},
+            type                    = #{type,jdbcType=VARCHAR},
+            last_update_chapter     = #{lastUpdateChapter,jdbcType=VARCHAR},
+            last_update_chapter_url = #{lastUpdateChapterUrl,jdbcType=VARCHAR},
+            status                  = #{status,jdbcType=INTEGER},
+            first_letter            = #{firstLetter,jdbcType=CHAR},
+            platform_id             = #{platformId,jdbcType=INTEGER},
+            addtime                 = #{addtime,jdbcType=DATE},
+            last_update_time        = #{lastUpdateTime,jdbcType=DATE}
+        WHERE id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <select id="getsNovelByKeyword" resultMap="BaseResultMap" parameterType="String">
+        SELECT
+        <include refid="Base_Column_List"/>
+        from novel
+        where name like #{keyword}
+        or
+        author LIKE #{keyword}
+    </select>
+
+
+    <select id="getsNovelByKeyword2" resultMap="BaseResultMap" parameterType="java.util.Map">
+        SELECT
+        <include refid="Base_Column_List"/>
+        from novel
+        WHERE ( name LIKE #{keyword} OR author LIKE #{keyword} )
+        AND
+        ( platform_id = #{platformId} )
+    </select>
+
+    <select id="getAutoCompletion" resultMap="BaseResultMap" parameterType="string">
+        SELECT name
+        FROM novel
+        WHERE name LIKE
+              #{keyword}
+        LIMIT 10
+    </select>
+
+
+</mapper>

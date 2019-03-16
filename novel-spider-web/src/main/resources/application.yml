@@ -14,7 +14,7 @@ spring:
       suffix: .jsp
 
 mybatis:
-  type-aliases-package: com.suny.web.entitys
+  type-aliases-package: com.suny.spider.novel.web.entitys
   configuration:
     map-underscore-to-camel-case: true
     default-fetch-size: 100

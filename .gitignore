@@ -15,7 +15,7 @@ web/target/
 /target/
 #pom.xml
 #spider/
-#/.idea/
+/.idea/
 novel-spider-core/target/classes/com/
 novel-spider-core/target/generated-sources/
 novel-spider-core/target/generated-test-sources/

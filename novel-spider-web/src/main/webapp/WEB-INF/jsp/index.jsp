@@ -165,10 +165,10 @@
     }
 
     function getAutoCompletion() {
-        console.log("开始自动补全，请求的关键字是"+document.getElementById("keyword").value);
+        console.log("开始自动补全，请求的关键字是" + document.getElementById("keyword").value);
         var xmlHttp = createxmlHttpRequest();
         xmlHttp.open("get", "${pageContext.request.contextPath}/getAutoCompletion?keyword=" +
-        document.getElementById("keyword").value, true);
+            document.getElementById("keyword").value, true);
         xmlHttp.send();
         xmlHttp.onreadystatechange = function () {
             if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
@@ -181,8 +181,7 @@
                         novelNameCompletion.appendChild(option);
                     }
 
-                }
-                else {
+                } else {
                     console.log("都没有数据");
                 }
 
@@ -228,8 +227,7 @@
                         NovelLastUrl.onclick = function () {
                             alert("哥，这本小说自己点进去看最新章节，不开车");
                         };
-                    }
-                    else {
+                    } else {
                         NovelLastUrl.href = "showNovelDetail?url=" + json.data[j].lastUpdateChapterUrl + "&baseUrl=" + json.data[j].url;   //最后更新一章的url
                         NovelLastUrl.innerHTML = json.data[j].lastUpdateChapter;  //最后一章的标题
                     }
